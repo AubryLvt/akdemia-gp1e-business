@@ -1,2 +1,0 @@
-# akademia-business
-
