@@ -1,0 +1,89 @@
+package af.cmr.indyli.akademia.business.entity;
+
+
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+@Entity
+@Table(name = "AKDEMIA_THEME")
+public class Theme implements IEntity {
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "THEME_TITLE")
+    private String themeTitle;
+
+    @Column(name = "DESCRIPTION")
+    private String description;
+
+    @Column(name = "CREATION_DATE")
+    private Date creationDate;
+
+    @Column(name = "UPDATE_DATE")
+    private Date updateDate;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "compose", joinColumns = @JoinColumn(name = "ID"), inverseJoinColumns = @JoinColumn(name = "ID_AKDEMIA_SUB_THEME"))
+    private List<SubTheme> subThemes = new ArrayList<>();
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    public Theme() {
+    }
+
+    @Override
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getThemeTitle() {
+        return this.themeTitle;
+    }
+
+    public void setThemeTitle(String themeTitle) {
+        this.themeTitle = themeTitle;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
+
+    public List<SubTheme> getSubThemes() {
+        return subThemes;
+    }
+
+    public void setSubThemes(List<SubTheme> subThemes) {
+        this.subThemes = subThemes;
+    }
+
+
+}
