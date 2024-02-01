@@ -13,5 +13,7 @@ import java.util.List;
 public interface IEmployeeSubscriptionService extends IAbstractAkdemiaService<EmployeeSubscription, EmployeeSubscriptionBasicDTO, EmployeeSubscriptionFullDTO, EmployeeSouscriptionRepository> {
     public IntraSessionFullDTO create(Integer intraSessionId, List<Integer> employeesId) throws AkdemiaBusinessException;
 
+
+    public List<EmployeeSubscriptionFullDTO> findByIntraSession(Integer sessionId) throws AkdemiaBusinessException;
     public void deleteAfterVerification(Integer subscriptionId) throws AkdemiaBusinessException;
 }

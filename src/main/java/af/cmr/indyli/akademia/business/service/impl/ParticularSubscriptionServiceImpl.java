@@ -8,6 +8,11 @@ import af.cmr.indyli.akademia.business.dto.basic.ParticularSubscriptionBasicDTO;
 import af.cmr.indyli.akademia.business.dto.full.InterSessionFullDTO;
 import af.cmr.indyli.akademia.business.dto.full.ParticularSubscriptionFullDTO;
 import af.cmr.indyli.akademia.business.entity.InterSession;
+import af.cmr.indyli.akademia.business.dto.full.EmployeeSubscriptionFullDTO;
+import af.cmr.indyli.akademia.business.dto.full.InterSessionFullDTO;
+import af.cmr.indyli.akademia.business.dto.full.ParticularSubscriptionFullDTO;
+import af.cmr.indyli.akademia.business.entity.InterSession;
+import af.cmr.indyli.akademia.business.entity.IntraSession;
 import af.cmr.indyli.akademia.business.entity.Particular;
 import af.cmr.indyli.akademia.business.entity.ParticularSubscription;
 import af.cmr.indyli.akademia.business.entity.Status;
@@ -88,5 +93,16 @@ public class ParticularSubscriptionServiceImpl extends AbstractAkdemiaServiceImp
             if (subscriptionParticularId.equals(particularId) && subscriptionInterSessionId.equals(interSessionId))
                 getDAO().delete(subscription);
         });
+    }
+
+    @Override
+    public List<ParticularSubscriptionFullDTO> findByInterSession(Integer sessionId) throws AkdemiaBusinessException {
+        InterSession session = interSessionRepository.findById(sessionId).orElse(null);
+        if(session == null)
+            throw new AkdemiaBusinessException("La session inter est introuvable");
+
+        return this.getDAO().findByInterSession(session)
+                .stream().map(employeeSubscription ->
+                        getModelMapper().map(employeeSubscription, ParticularSubscriptionFullDTO.class)).toList();
     }
 }

@@ -11,6 +11,7 @@ public interface IAbstractAkdemiaService<Entity, BasicDTO, FullDTO extends Basic
 	public FullDTO update(FullDTO entToUpdate) throws AkdemiaBusinessException, AccessDeniedException;
 	public void deleteById(int id) throws AkdemiaBusinessException, AccessDeniedException;
 	public List<BasicDTO> findAll();
+	public List<FullDTO> findAllByFull();
 	public FullDTO findById(int id) throws AkdemiaBusinessException;
 	public boolean ifEntityExistById(int id) throws AkdemiaBusinessException;
 	public <T extends BasicDTO> T findById(int id, Class<T> type) throws AkdemiaBusinessException;

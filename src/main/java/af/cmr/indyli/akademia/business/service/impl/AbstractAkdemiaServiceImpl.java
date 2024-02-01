@@ -59,6 +59,16 @@ public abstract class AbstractAkdemiaServiceImpl<Entity extends IEntity, BasicDT
         }
         return viewList;
     }
+    
+    public List<FullDTO> findAllByFull() {
+        List<Entity> list = this.getDAO().findAll();
+        List<FullDTO> viewList = new ArrayList<FullDTO>();
+        for (Entity ent : list) {
+            FullDTO view = this.getModelMapper().map(ent, this.fullClass);
+            viewList.add(view);
+        }
+        return viewList;
+    }
 
     public FullDTO findById(int id) throws AkdemiaBusinessException {
         Entity ent = this.getDAO().findById(id).orElse(null);
