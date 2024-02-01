@@ -24,4 +24,3 @@ public class ReglesGestion {
     public static final String RG20 = "RG20 : Un participant ne peut être ajouté à la même session plusieur fois";
 
 }
-
