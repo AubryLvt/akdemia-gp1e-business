@@ -58,12 +58,15 @@ public class ParticularSubscriptionServiceImpl extends AbstractAkdemiaServiceImp
         particularsId.forEach((id) -> {
             Particular p = particularRepository.findById(id).orElse(null);
             if (p != null) {
+                boolean isEmployeeSubscribed = interSession.getParticularSubscriptions().stream().anyMatch((ps) -> ps.getParticular().getEmail().equals(p.getEmail()));
                 ParticularSubscription particularSubscription = new ParticularSubscription();
-                particularSubscription.setParticular(p);
-                particularSubscription.setInterSession(interSession);
-                particularSubscription.setCreationDate(new Date());
-                particularSubscription.setStatus(Status.IN_PROGRESS);
-                particularSouscriptionRepository.save(particularSubscription);
+                if(!isEmployeeSubscribed){
+                    particularSubscription.setParticular(p);
+                    particularSubscription.setInterSession(interSession);
+                    particularSubscription.setCreationDate(new Date());
+                    particularSubscription.setStatus(Status.IN_PROGRESS);
+                    particularSouscriptionRepository.save(particularSubscription);
+                }
             }
         });
 

@@ -49,9 +49,9 @@ public class EmployeeSubscriptionServiceImpl extends AbstractAkdemiaServiceImpl<
         employeesId.forEach((id) -> {
             Employee employee = employeeRepository.findById(id).orElse(null);
             EmployeeSubscription employeeSubscription = new EmployeeSubscription();
-
             if (employee != null) {
-                boolean isEmployeeSubscribed = employee.getEmployeeSubscriptions().stream().anyMatch(s -> s.getIntraSession().getId().equals(intraSessionId));
+                boolean isEmployeeSubscribed = intraSession.getEmployeeSubscriptions().stream().anyMatch((es) -> es.getEmployee().getEmail().equals(employee.getEmail()));
+                //boolean isEmployeeSubscribed = employee.getEmployeeSubscriptions().stream().anyMatch(s -> s.getIntraSession().getId().equals(intraSessionId));
                 if (!isEmployeeSubscribed) {
                     employeeSubscription.setEmployee(employee);
                     employeeSubscription.setStatus(Status.OPEN);
