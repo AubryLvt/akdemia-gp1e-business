@@ -81,9 +81,8 @@ public class EmployeeServiceImpl extends AbstractAkdemiaServiceImpl<Employee, Em
 
         if (tmpEmployee == null) {
             throw new AkdemiaBusinessException("L'objet à supprimer n'existe pas en Base...");
-        } else if (!tmpEmployee.getEmployeeSubscriptions().isEmpty()) {
-            throw new AkdemiaBusinessException(ReglesGestion.RG16);
         }
+        // TODO: 15/02/2024 "T9: ajoutez un bloc else-if pour gérer la RG16"
 
         getDAO().deleteById(id);
 

@@ -67,9 +67,8 @@ public class ParticularServiceImpl extends AbstractAkdemiaServiceImpl<Particular
 
         if (tmpParticipant == null) {
             throw new AkdemiaBusinessException("L'objet à supprimer n'existe pas en Base...");
-        } else if (!tmpParticipant.getParticularSubscriptions().isEmpty()) {
-            throw new AkdemiaBusinessException(ReglesGestion.RG16);
         }
+        // TODO: 15/02/2024 "T10: ajoutez un bloc else-if pour gérer la RG16"
 
         getDAO().deleteById(id);
     }

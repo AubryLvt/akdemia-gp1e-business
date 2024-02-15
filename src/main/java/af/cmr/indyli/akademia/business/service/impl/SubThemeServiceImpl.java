@@ -69,10 +69,9 @@ public class SubThemeServiceImpl extends AbstractAkdemiaServiceImpl<SubTheme, Su
            throw new AkdemiaBusinessException("L'élement à supprimer n'existe pas");
        }
 
-        if (tmpTrainings.getTrainings().isEmpty()) {
-            this.getDAO().deleteById(id);
-        } else {
-            throw new AkdemiaBusinessException(ReglesGestion.RG11);
-        }
+       // TODO: 15/02/2024 "T11: ajoutez un bloc if pour gérer la RG11"
+
+       this.getDAO().deleteById(id);
+
     }
 }

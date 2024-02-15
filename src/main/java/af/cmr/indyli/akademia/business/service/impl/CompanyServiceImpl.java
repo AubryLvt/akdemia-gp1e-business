@@ -62,9 +62,8 @@ public class CompanyServiceImpl extends AbstractAkdemiaServiceImpl<Company, Comp
 
         if (tmpCompany == null) {
             throw new AkdemiaBusinessException("L'objet à supprimer n'existe pas en base...");
-        } else if (!tmpCompany.getIntraSessions().isEmpty()) {
-            throw new AkdemiaBusinessException(ReglesGestion.RG19);
         }
+        // TODO: 15/02/2024 "T8: ajoutez un bloc else-if pour gérer la RG19"
 
         getDAO().deleteById(id);
     }

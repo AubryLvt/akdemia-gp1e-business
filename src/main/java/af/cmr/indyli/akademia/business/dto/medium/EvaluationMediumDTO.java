@@ -1,18 +1,14 @@
 package af.cmr.indyli.akademia.business.dto.medium;
 
-import java.util.Date;
-
 import af.cmr.indyli.akademia.business.dto.basic.EmployeeBasicDTO;
 import af.cmr.indyli.akademia.business.dto.basic.EvaluationBasicDTO;
 import af.cmr.indyli.akademia.business.dto.basic.ParticularBasicDTO;
-import af.cmr.indyli.akademia.business.dto.basic.SessionBasicDTO;
-import af.cmr.indyli.akademia.business.entity.Employee;
-import af.cmr.indyli.akademia.business.entity.Particular;
-import af.cmr.indyli.akademia.business.entity.Session;
 
 public class EvaluationMediumDTO extends EvaluationBasicDTO {
+
+    // TODO: 15/02/2024 "T1: créez un attribut  dto basic session avec ses accesseurs"
+
     private EmployeeBasicDTO employee;
-    private SessionBasicDTO session;
     private ParticularBasicDTO particular;
 
     public EvaluationMediumDTO() {
@@ -26,14 +22,7 @@ public class EvaluationMediumDTO extends EvaluationBasicDTO {
     public void setEmployee(EmployeeBasicDTO employee) {
         this.employee = employee;
     }
-
-    public SessionBasicDTO getSession() {
-        return session;
-    }
-
-    public void setSession(SessionBasicDTO session) {
-        this.session = session;
-    }
+    
 
     public ParticularBasicDTO getParticular() {
         return particular;
