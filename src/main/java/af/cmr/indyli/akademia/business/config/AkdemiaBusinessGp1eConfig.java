@@ -14,7 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan("af.cmr.indyli.akademia.business.entity")
 @EnableJpaRepositories("af.cmr.indyli.akademia.business.dao")
 @ComponentScan(basePackages = { "af.cmr.indyli.akademia.business.*" })
-public class AkdemiaBusinessConfig {
+public class AkdemiaBusinessGp1eConfig {
 
 	@Bean(value = "akdemia-modelmapper")
 	@Scope(value = "singleton")

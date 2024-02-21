@@ -1,13 +1,13 @@
 package af.cmr.indyli.akademia.business.dto;
 
-public class AuthRequest {
+public class UserRequestDTO {
     private String email;
     private String password;
 
-    public AuthRequest() {
+    public UserRequestDTO() {
     }
 
-    public AuthRequest(String email, String password) {
+    public UserRequestDTO(String email, String password) {
         this.email = email;
         this.password = password;
     }

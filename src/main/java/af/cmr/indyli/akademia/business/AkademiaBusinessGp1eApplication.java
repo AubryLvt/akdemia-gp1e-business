@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-public class AkademiaBusinessApplication {
+public class AkademiaBusinessGp1eApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AkademiaBusinessApplication.class, args);
+        SpringApplication.run(AkademiaBusinessGp1eApplication.class, args);
     }
 }
