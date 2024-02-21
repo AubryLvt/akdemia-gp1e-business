@@ -31,8 +31,8 @@ public class Evaluation implements IEntity {
     @ManyToOne
     private Particular particular;
 
-    @ManyToOne
-    private Session session;
+    //@ManyToOne
+    //private Session session;
 
     public Evaluation() {
     }
@@ -99,11 +99,11 @@ public class Evaluation implements IEntity {
         this.particular = particular;
     }
 
-    public Session getSession() {
+/*    public Session getSession() {
         return session;
     }
 
     public void setSession(Session session) {
         this.session = session;
-    }
+    }*/
 }

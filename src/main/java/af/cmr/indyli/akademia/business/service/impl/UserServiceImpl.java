@@ -17,15 +17,22 @@ import af.cmr.indyli.akademia.business.service.IUserService;
 import af.cmr.indyli.akademia.business.utils.ConstsValues;
 import af.cmr.indyli.akademia.business.utils.ReglesGestion;
 import jakarta.annotation.Resource;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.Optional;
 
 @Service(ConstsValues.ServiceKeys.USER_SERVICE_KEY)
-public class UserServiceImpl extends AbstractAkdemiaServiceImpl<User, UserBasicDTO, UserFullDTO, UserRepository> implements IUserService {
+public class UserServiceImpl extends AbstractAkdemiaServiceImpl<User, UserBasicDTO, UserFullDTO, UserRepository> implements IUserService, UserDetailsService {
     @Resource(name = ConstsValues.ConstsDAO.USER_DAO_KEY)
     private UserRepository userRepository;
+
+    @Resource(name = "BCRYPT_ENCODER")
+    private BCryptPasswordEncoder passwordEncoder;
 
     @Resource(name = ConstsValues.ConstsDAO.MANAGER_DAO_KEY)
     private ManagerRepository managerRepository;
@@ -74,25 +81,14 @@ public class UserServiceImpl extends AbstractAkdemiaServiceImpl<User, UserBasicD
         Role role = roleRepository.findByRoleName(dto.getRoleName());
 
         if (dto.getRoleName().equalsIgnoreCase("manager")) {
-            Manager manager = new Manager();
-            manager.setFirstname(dto.getFirstName());
-            manager.setLastname(dto.getLastName());
-            manager.setGender(dto.getGender());
-            manager.setPhoto(dto.getPhoto());
-            manager.setEmail(dto.getEmail());
-            manager.setAddress(dto.getAddress());
-            manager.setPhone(dto.getPhone());
+            Manager manager = this.getModelMapper().map(dto,Manager.class);
             manager.setCreationDate(new Date());
-            //manager.setPassword(passwordEncoder.encode(dto.getPassword()));
+            manager.setPassword(passwordEncoder.encode(dto.getPassword()));
             user = managerRepository.save(manager);
         }
-
-        user.setPhoto(dto.getPhoto());
-        user.setEmail(dto.getEmail());
-        user.setAddress(dto.getAddress());
-        user.setPhone(dto.getPhone());
+        user = this.getModelMapper().map(dto,User.class);
         user.setCreationDate(new Date());
-        //user.setPassword(passwordEncoder.encode(dto.getPassword()));
+        user.setPassword(passwordEncoder.encode(dto.getPassword()));
         user = userRepository.save(user);
 
         Privilege privilege = new Privilege();
@@ -124,5 +120,11 @@ public class UserServiceImpl extends AbstractAkdemiaServiceImpl<User, UserBasicD
 
 
         return this.getModelMapper().map(user, UserFullDTO.class);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        Optional<User> userDetail = userRepository.findUserByEmail(username);
+        return userDetail.map(User::cloneUser).orElseThrow(() -> new UsernameNotFoundException("User not found " + username));
     }
 }

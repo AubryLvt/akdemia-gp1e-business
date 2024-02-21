@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableJpaAuditing
@@ -20,5 +21,10 @@ public class AkdemiaBusinessGp1eConfig {
 	@Scope(value = "singleton")
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
+	}
+
+	@Bean(value = "BCRYPT_ENCODER")
+	BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
 	}
 }

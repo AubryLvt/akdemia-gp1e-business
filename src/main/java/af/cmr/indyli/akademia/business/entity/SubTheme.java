@@ -27,10 +27,6 @@ public class SubTheme implements IEntity {
     @Column(name = "UPDATE_DATE")
     private Date updateDate;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "content", joinColumns = @JoinColumn(name = "ID"), inverseJoinColumns = @JoinColumn(name = "ID_AKDEMIA_TRAINING"))
-    private List<Training> trainings = new ArrayList<>();
-
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "compose", joinColumns = @JoinColumn(name = "ID_AKDEMIA_SUB_THEME"), inverseJoinColumns = @JoinColumn(name = "ID"))
@@ -72,14 +68,6 @@ public class SubTheme implements IEntity {
 
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
-    }
-
-    public List<Training> getTrainings() {
-        return trainings;
-    }
-
-    public void setTrainings(List<Training> trainings) {
-        this.trainings = trainings;
     }
 
     public String getDescription() {

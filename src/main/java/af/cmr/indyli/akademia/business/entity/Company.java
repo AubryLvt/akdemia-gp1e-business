@@ -22,9 +22,6 @@ public class Company extends User implements IEntity {
     @OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
     private List<Employee> employees = new ArrayList<>();
 
-    @OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
-    private List<IntraSession> intraSessions = new ArrayList<>();
-
     @Override
     public Integer getId() {
         return id;
@@ -59,11 +56,4 @@ public class Company extends User implements IEntity {
         this.employees = employees;
     }
 
-    public List<IntraSession> getIntraSessions() {
-        return intraSessions;
-    }
-
-    public void setIntraSessions(List<IntraSession> intraSessions) {
-        this.intraSessions = intraSessions;
-    }
 }

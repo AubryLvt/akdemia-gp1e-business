@@ -27,9 +27,6 @@ public class ValidationTest implements IEntity{
     private Date updateDate;
 
     @ManyToOne
-    private Training training;
-
-    @ManyToOne
     private Test test;
 
     public ValidationTest() {
@@ -75,14 +72,6 @@ public class ValidationTest implements IEntity{
 
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
-    }
-
-    public Training getTraining() {
-        return training;
-    }
-
-    public void setTraining(Training training) {
-        this.training = training;
     }
 
     public Test getTest() {

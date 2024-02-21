@@ -1,11 +1,7 @@
 package af.cmr.indyli.akademia.business.dto.basic;
 
 import af.cmr.indyli.akademia.business.dto.IDTO;
-import af.cmr.indyli.akademia.business.entity.Test;
-import af.cmr.indyli.akademia.business.entity.Training;
 
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
 
 public class ValidationTestBasicDTO implements IDTO {

@@ -3,15 +3,20 @@ package af.cmr.indyli.akademia.business.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "AKDEMIA_USER")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class User implements IEntity {
+public class User implements IEntity, UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -87,9 +92,41 @@ public class User implements IEntity {
         this.login = login;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return this.getPrivileges().stream().map((p) -> p.getRole()).map((r) -> r.getRoleName()).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+    }
+
+    @Override
     public String getPassword() {
         return this.password;
     }
+
+    @Override
+    public String getUsername() {
+        return this.email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
 
     public void setPassword(String password) {
         this.password = password;
@@ -125,5 +162,9 @@ public class User implements IEntity {
 
     public void setPrivileges(List<Privilege> privileges) {
         this.privileges = privileges;
+    }
+
+    public UserDetails cloneUser() {
+        return this;
     }
 }

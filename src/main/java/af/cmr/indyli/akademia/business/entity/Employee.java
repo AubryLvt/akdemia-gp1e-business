@@ -46,9 +46,6 @@ public class Employee extends User {
     @JoinColumn(name = "ID_AKDEMIA_COMPANY")
     private Company company;
 
-    @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
-    private List<EmployeeSubscription> employeeSubscriptions = new ArrayList<>();
-
     public Employee() {
     }
 
@@ -82,13 +79,5 @@ public class Employee extends User {
 
     public void setCompany(Company company) {
         this.company = company;
-    }
-
-    public List<EmployeeSubscription> getEmployeeSubscriptions() {
-        return employeeSubscriptions;
-    }
-
-    public void setEmployeeSubscriptions(List<EmployeeSubscription> employeeSubscriptions) {
-        this.employeeSubscriptions = employeeSubscriptions;
     }
 }

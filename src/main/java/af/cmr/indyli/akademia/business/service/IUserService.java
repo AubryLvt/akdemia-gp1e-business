@@ -8,6 +8,8 @@ import af.cmr.indyli.akademia.business.dto.basic.UserBasicDTO;
 import af.cmr.indyli.akademia.business.dto.full.UserFullDTO;
 import af.cmr.indyli.akademia.business.entity.User;
 import af.cmr.indyli.akademia.business.exception.AkdemiaBusinessException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 public interface IUserService extends IAbstractAkdemiaService<User, UserBasicDTO, UserFullDTO, UserRepository> {
     boolean isExistUserByEmail(String email);
@@ -20,4 +22,5 @@ public interface IUserService extends IAbstractAkdemiaService<User, UserBasicDTO
 
 
     public UserFullDTO findUserById(Integer userId) throws AkdemiaBusinessException;
+
 }

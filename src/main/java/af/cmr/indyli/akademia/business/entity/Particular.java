@@ -28,9 +28,6 @@ public class Particular extends User {
     @Column(name = "BIRTH_DATE")
     private Date birthDate;
 
-    @OneToMany(mappedBy = "particular", fetch = FetchType.EAGER)
-    private List<ParticularSubscription> particularSubscriptions = new ArrayList<>();
-
     public Particular() {
     }
 
@@ -64,14 +61,6 @@ public class Particular extends User {
 
     public void setActivity(String activity) {
         this.activity = activity;
-    }
-
-    public List<ParticularSubscription> getParticularSubscriptions() {
-        return particularSubscriptions;
-    }
-
-    public void setParticularSubscriptions(List<ParticularSubscription> particularSubscriptions) {
-        this.particularSubscriptions = particularSubscriptions;
     }
 
     public String getHighestDiploma() {

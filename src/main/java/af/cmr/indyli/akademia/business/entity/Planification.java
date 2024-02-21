@@ -27,8 +27,8 @@ public class Planification implements IEntity{
     @ManyToOne
     private Company company;
 
-    @ManyToOne
-    private Training training;
+    //@ManyToOne
+    //private Training training;
 
     public Planification() {
     }
@@ -83,11 +83,11 @@ public class Planification implements IEntity{
         this.company = company;
     }
 
-    public Training getTraining() {
+/*    public Training getTraining() {
         return training;
     }
 
     public void setTraining(Training training) {
         this.training = training;
-    }
+    }*/
 }
