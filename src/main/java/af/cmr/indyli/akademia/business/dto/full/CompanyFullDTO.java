@@ -2,23 +2,28 @@ package af.cmr.indyli.akademia.business.dto.full;
 
 import af.cmr.indyli.akademia.business.dto.basic.EmployeeBasicDTO;
 import af.cmr.indyli.akademia.business.dto.medium.CompanyMediumDTO;
+import af.cmr.indyli.akademia.business.entity.Company;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a full Data Transfer Object (DTO) for a {@link Company}
+ * entity, it extends {@link CompanyMediumDTO}.
+ */
 public class CompanyFullDTO extends CompanyMediumDTO {
-    private List<EmployeeBasicDTO> employees = new ArrayList<>();
+	private List<EmployeeBasicDTO> employees = new ArrayList<>();
 
-    // TODO: 15/02/2024 "T4: creez un attribut  dto List<basic> intrasessions avec ses accesseurs"
 
-    public CompanyFullDTO() {
-    }
+	public CompanyFullDTO() {
+	}
 
-    public List<EmployeeBasicDTO> getEmployees() {
-        return employees;
-    }
+	public List<EmployeeBasicDTO> getEmployees() {
+		return employees;
+	}
 
-    public void setEmployees(List<EmployeeBasicDTO> employees) {
-        this.employees = employees;
-    }
+	public void setEmployees(List<EmployeeBasicDTO> employees) {
+		this.employees = employees;
+	}
+
 }

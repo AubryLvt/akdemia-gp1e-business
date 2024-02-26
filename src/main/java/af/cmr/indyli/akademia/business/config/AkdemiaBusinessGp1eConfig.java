@@ -10,6 +10,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+/**
+ * This class represents the configuration for the Akdemia business module. It
+ * enables JPA auditing, scans for entity classes, repository interfaces, and
+ * components within the specified base packages, and defines a singleton bean
+ * for the ModelMapper instance.
+ */
 @Configuration
 @EnableJpaAuditing
 @EntityScan("af.cmr.indyli.akademia.business.entity")

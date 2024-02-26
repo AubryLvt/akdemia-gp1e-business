@@ -1,50 +1,54 @@
 package af.cmr.indyli.akademia.business.dto.basic;
 
 import af.cmr.indyli.akademia.business.dto.IDTO;
+import af.cmr.indyli.akademia.business.entity.Role;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
+/**
+ * This class represents a basic Data Transfer Object (DTO) for a {@link Role}
+ * entity.
+ */
 public class RoleBasicDTO implements IDTO {
-    private Integer id;
-    private String roleName;
-    private Date creationDate;
-    private Date updateDate;
+	private Integer id;
+	private String roleName;
+	private Date creationDate;
+	private Date updateDate;
 
-    public RoleBasicDTO() {
-    }
+	public RoleBasicDTO() {
+	}
 
-    @Override
-    public Integer getId() {
-        return id;
-    }
+	@Override
+	public Integer getId() {
+		return id;
+	}
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	@Override
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getRoleName() {
-        return roleName;
-    }
+	public String getRoleName() {
+		return roleName;
+	}
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
+	public Date getCreationDate() {
+		return creationDate;
+	}
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
-    public Date getUpdateDate() {
-        return updateDate;
-    }
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 }

@@ -1,6 +1,6 @@
 package af.cmr.indyli.akademia.business.service.impl;
 
-import af.cmr.indyli.akademia.business.dao.RoleRepository;
+import af.cmr.indyli.akademia.business.dao.IRoleRepository;
 import af.cmr.indyli.akademia.business.dto.basic.RoleBasicDTO;
 import af.cmr.indyli.akademia.business.dto.full.RoleFullDTO;
 import af.cmr.indyli.akademia.business.entity.Role;
@@ -9,19 +9,26 @@ import af.cmr.indyli.akademia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service implementation class for managing {@link Role} entity, extending the
+ * AbstractAkdemiaServiceImpl class. This class provides specific functionality
+ * for managing roles, including CRUD operations.
+ *
+ * @see AbstractAkdemiaServiceImpl
+ */
 @Service(ConstsValues.ServiceKeys.ROLE_SERVICE_KEY)
-public class RoleServiceImpl extends AbstractAkdemiaServiceImpl<Role, RoleBasicDTO, RoleFullDTO, RoleRepository> implements IRoleService {
+public class RoleServiceImpl extends AbstractAkdemiaServiceImpl<Role, RoleBasicDTO, RoleFullDTO, IRoleRepository>
+		implements IRoleService {
 
+	@Resource(name = ConstsValues.ConstsDAO.ROLE_DAO_KEY)
+	private IRoleRepository roleRepository;
 
-    @Resource(name = ConstsValues.ConstsDAO.ROLE_DAO_KEY)
-    private RoleRepository roleRepository;
+	public RoleServiceImpl() {
+		super(Role.class, RoleBasicDTO.class, RoleFullDTO.class);
+	}
 
-    public RoleServiceImpl() {
-        super(Role.class, RoleBasicDTO.class, RoleFullDTO.class);
-    }
-
-    @Override
-    public RoleRepository getDAO() {
-        return this.roleRepository;
-    }
+	@Override
+	public IRoleRepository getDAO() {
+		return this.roleRepository;
+	}
 }

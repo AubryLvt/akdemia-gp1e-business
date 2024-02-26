@@ -1,62 +1,65 @@
 package af.cmr.indyli.akademia.business.dto.basic;
 
 import af.cmr.indyli.akademia.business.dto.IDTO;
+import af.cmr.indyli.akademia.business.entity.Evaluation;
 
 import java.util.Date;
 
+/**
+ * This class represents a basic Data Transfer Object (DTO) for a
+ * {@link Evaluation} entity.
+ */
 public class EvaluationBasicDTO implements IDTO {
-    private Integer id;
-    private Integer sessionScore;
-    private Integer trainerScore;
-    private Date creationDate;
-    private Date updateDate;
+	private Integer id;
+	private Integer sessionScore;
+	private Integer trainerScore;
+	private Date creationDate;
+	private Date updateDate;
 
+	public EvaluationBasicDTO() {
+		super();
+	}
 
-    public EvaluationBasicDTO() {
-        super();
-    }
+	@Override
+	public Integer getId() {
+		return this.id;
+	}
 
-    @Override
-    public Integer getId() {
-        return this.id;
-    }
+	@Override
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getSessionScore() {
+		return sessionScore;
+	}
 
-    public Integer getSessionScore() {
-        return sessionScore;
-    }
+	public void setSessionScore(Integer sessionScore) {
+		this.sessionScore = sessionScore;
+	}
 
-    public void setSessionScore(Integer sessionScore) {
-        this.sessionScore = sessionScore;
-    }
+	public Integer getTrainerScore() {
+		return trainerScore;
+	}
 
-    public Integer getTrainerScore() {
-        return trainerScore;
-    }
+	public void setTrainerScore(Integer trainerScore) {
+		this.trainerScore = trainerScore;
+	}
 
-    public void setTrainerScore(Integer trainerScore) {
-        this.trainerScore = trainerScore;
-    }
+	public Date getCreationDate() {
+		return creationDate;
+	}
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
-    public Date getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
-
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 
 }

@@ -1,6 +1,5 @@
 package af.cmr.indyli.akademia.business.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,158 +12,158 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * This class represents a User entity. It encapsulates information about a user
+ * account.
+ */
 @Entity
 @Table(name = "AKDEMIA_USER")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User implements IEntity, UserDetails {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
-    private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
+	private Integer id;
 
-    @Column(name = "PHONE")
-    private String phone;
+	@Column(name = "PHONE")
+	private String phone;
 
-    @Column(name = "EMAIL")
-    private String email;
+	@Column(name = "EMAIL")
+	private String email;
 
-    @Column(name = "ADDRESS")
-    private String address;
+	@Column(name = "ADDRESS")
+	private String address;
 
-    @Column(name = "LOGIN")
-    private String login;
+	@Column(name = "LOGIN")
+	private String login;
 
-    @Column(name = "PASSWORD")
-    private String password;
+	@Column(name = "PASSWORD")
+	private String password;
 
-    @Column(name = "PHOTO")
-    private String photo;
+	@Column(name = "PHOTO")
+	private String photo;
 
-    @Column(name = "CREATION_DATE")
-    private Date creationDate;
+	@Column(name = "CREATION_DATE")
+	private Date creationDate;
 
-    @Column(name = "UPDATE_DATE")
-    private Date updateDate;
+	@Column(name = "UPDATE_DATE")
+	private Date updateDate;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private List<Privilege> privileges = new ArrayList<>();
+	@JsonIgnore
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	private List<Privilege> privileges = new ArrayList<>();
 
-    @Override
-    public Integer getId() {
-        return id;
-    }
+	@Override
+	public Integer getId() {
+		return id;
+	}
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	@Override
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getPhone() {
-        return this.phone;
-    }
+	public String getPhone() {
+		return this.phone;
+	}
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-    public String getEmail() {
-        return this.email;
-    }
+	public String getEmail() {
+		return this.email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getAddress() {
-        return this.address;
-    }
+	public String getAddress() {
+		return this.address;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public String getLogin() {
-        return this.login;
-    }
+	public String getLogin() {
+		return this.login;
+	}
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
+	public void setLogin(String login) {
+		this.login = login;
+	}
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.getPrivileges().stream().map((p) -> p.getRole()).map((r) -> r.getRoleName()).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
-    }
+	public String getPassword() {
+		return this.password;
+	}
 
-    @Override
-    public String getPassword() {
-        return this.password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    @Override
-    public String getUsername() {
-        return this.email;
-    }
+	public String getPhoto() {
+		return this.photo;
+	}
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
+	public Date getCreationDate() {
+		return creationDate;
+	}
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public List<Privilege> getPrivileges() {
+		return privileges;
+	}
 
-    public String getPhoto() {
-        return this.photo;
-    }
+	public void setPrivileges(List<Privilege> privileges) {
+		this.privileges = privileges;
+	}
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return this.getPrivileges().stream().map((p) -> p.getRole()).map((r) -> r.getRoleName())
+				.map(SimpleGrantedAuthority::new).collect(Collectors.toList());
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
+	}
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
+	@Override
+	public String getUsername() {
+		return this.email;
+	}
 
-    public Date getUpdateDate() {
-        return updateDate;
-    }
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
 
-    public List<Privilege> getPrivileges() {
-        return privileges;
-    }
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
 
-    public void setPrivileges(List<Privilege> privileges) {
-        this.privileges = privileges;
-    }
-
-    public UserDetails cloneUser() {
-        return this;
-    }
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}
 }

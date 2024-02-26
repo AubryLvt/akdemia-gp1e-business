@@ -1,44 +1,46 @@
 package af.cmr.indyli.akademia.business.dto.basic;
 
 import af.cmr.indyli.akademia.business.dto.IDTO;
-import af.cmr.indyli.akademia.business.entity.User;
+import af.cmr.indyli.akademia.business.entity.Privilege;
 
 import java.util.Date;
 
+/**
+ * This class represents a basic Data Transfer Object (DTO) for a
+ * {@link Privilege} entity.
+ */
 public class PrivilegeBasicDTO implements IDTO {
-    private Integer id;
-    private Date creationDate;
-    private Date updateDate;
+	private Integer id;
+	private Date creationDate;
+	private Date updateDate;
 
+	public PrivilegeBasicDTO() {
+	}
 
-    public PrivilegeBasicDTO() {
-    }
+	@Override
+	public Integer getId() {
+		return id;
+	}
 
-    @Override
-    public Integer getId() {
-        return id;
-    }
+	@Override
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
+	public Date getCreationDate() {
+		return creationDate;
+	}
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public Date getUpdateDate() {
-        return updateDate;
-    }
-
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
 }

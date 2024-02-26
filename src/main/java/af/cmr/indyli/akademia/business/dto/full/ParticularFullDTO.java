@@ -1,16 +1,15 @@
 package af.cmr.indyli.akademia.business.dto.full;
 
 import af.cmr.indyli.akademia.business.dto.medium.ParticularMediumDTO;
+import af.cmr.indyli.akademia.business.entity.Particular;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * This class represents a full Data Transfer Object (DTO) for a
+ * {@link Particular} entity, it extends {@link ParticularMediumDTO}.
+ */
 public class ParticularFullDTO extends ParticularMediumDTO {
 
-    // TODO: 15/02/2024 "T6: créez un attribut  dto List<basic> particularSubscriptions avec ses accesseurs"
-
-
-    public ParticularFullDTO() {
-    }
+	public ParticularFullDTO() {
+	}
 
 }

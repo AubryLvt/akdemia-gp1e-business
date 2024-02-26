@@ -1,6 +1,6 @@
 package af.cmr.indyli.akademia.business.service.impl;
 
-import af.cmr.indyli.akademia.business.dao.ValidationTestRepository;
+import af.cmr.indyli.akademia.business.dao.IValidationTestRepository;
 import af.cmr.indyli.akademia.business.dto.basic.ValidationTestBasicDTO;
 import af.cmr.indyli.akademia.business.dto.full.ValidationTestFullDTO;
 import af.cmr.indyli.akademia.business.entity.ValidationTest;
@@ -9,18 +9,27 @@ import af.cmr.indyli.akademia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service implementation class for managing {@link ValidationTest} entity,
+ * extending the AbstractAkdemiaServiceImpl class. This class provides specific
+ * functionality for managing validation tests, including CRUD operations.
+ *
+ * @see AbstractAkdemiaServiceImpl
+ */
 @Service(ConstsValues.ServiceKeys.VALIDATION_TEST_SERVICE_KEY)
-public class ValidationTestServiceImpl extends AbstractAkdemiaServiceImpl<ValidationTest, ValidationTestBasicDTO, ValidationTestFullDTO, ValidationTestRepository> implements IValidationTestService {
+public class ValidationTestServiceImpl extends
+		AbstractAkdemiaServiceImpl<ValidationTest, ValidationTestBasicDTO, ValidationTestFullDTO, IValidationTestRepository>
+		implements IValidationTestService {
 
-    @Resource(name = ConstsValues.ConstsDAO.VALIDATION_TEST_DAO_KEY)
-    private ValidationTestRepository validationTestRepository;
+	@Resource(name = ConstsValues.ConstsDAO.VALIDATION_TEST_DAO_KEY)
+	private IValidationTestRepository validationTestRepository;
 
-    public ValidationTestServiceImpl() {
-        super(ValidationTest.class, ValidationTestBasicDTO.class, ValidationTestFullDTO.class);
-    }
+	public ValidationTestServiceImpl() {
+		super(ValidationTest.class, ValidationTestBasicDTO.class, ValidationTestFullDTO.class);
+	}
 
-    @Override
-    public ValidationTestRepository getDAO() {
-        return this.validationTestRepository;
-    }
+	@Override
+	public IValidationTestRepository getDAO() {
+		return this.validationTestRepository;
+	}
 }
