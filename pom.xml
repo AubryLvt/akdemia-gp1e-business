@@ -9,11 +9,11 @@
         <version>3.2.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>af.cmr.indyli.akademia.business</groupId>
-    <artifactId>akademia-gp1e-business</artifactId>
+    <groupId>af.cmr.indyli.akdemia.business</groupId>
+    <artifactId>akdemia-gp1e-business</artifactId>
     <version>1.0.1-SNAPSHOT</version>
-    <name>akademia-business</name>
-    <description>akademia-business</description>
+    <name>akdemia-business</name>
+    <description>akdemia-business</description>
     <properties>
         <java.version>17</java.version>
     </properties>
