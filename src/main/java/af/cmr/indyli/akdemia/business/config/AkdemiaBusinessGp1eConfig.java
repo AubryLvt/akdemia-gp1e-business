@@ -25,7 +25,7 @@ public class AkdemiaBusinessGp1eConfig {
 
 	@Bean(value = "akdemia-modelmapper")
 	@Scope(value = "singleton")
-	public ModelMapper modelMapper() {
+	ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
 
