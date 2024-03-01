@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Manager;
  * {@link Manager} entity.
  */
 public class ManagerBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2290728032235875493L;
 	private Integer id;
 	private String phone;
 	private String email;

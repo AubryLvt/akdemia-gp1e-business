@@ -24,6 +24,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_SUB_THEME")
 public class SubTopic implements IEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5840616928687527039L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")

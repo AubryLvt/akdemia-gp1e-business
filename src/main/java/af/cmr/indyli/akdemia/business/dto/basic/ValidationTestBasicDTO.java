@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.ValidationTest;
  * {@link ValidationTest} entity.
  */
 public class ValidationTestBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5177683837887150440L;
 	private Integer id;
 	private Date testDate;
 	private Integer score;

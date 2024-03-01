@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Evaluation;
  * {@link Evaluation} entity.
  */
 public class EvaluationBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3396199272303693682L;
 	private Integer id;
 	private Integer sessionScore;
 	private Integer trainerScore;

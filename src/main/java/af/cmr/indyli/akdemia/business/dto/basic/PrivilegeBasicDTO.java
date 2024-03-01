@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Privilege;
  * {@link Privilege} entity.
  */
 public class PrivilegeBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6080128995188947929L;
 	private Integer id;
 	private Date creationDate;
 	private Date updateDate;

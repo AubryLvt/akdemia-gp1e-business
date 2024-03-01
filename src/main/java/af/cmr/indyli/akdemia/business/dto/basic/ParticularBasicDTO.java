@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Particular;
  * {@link Particular} entity.
  */
 public class ParticularBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6654056478850955048L;
 	private Integer id;
 	private String phone;
 	private String email;

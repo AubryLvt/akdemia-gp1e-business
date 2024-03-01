@@ -12,6 +12,10 @@ import af.cmr.indyli.akdemia.business.entity.Topic;
  * entity, it extends {@link TopicMediumDTO}.
  */
 public class TopicFullDTO extends TopicMediumDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -70905208811847950L;
 	private List<SubTopicBasicDTO> subThemes = new ArrayList<>();
 
 	public List<SubTopicBasicDTO> getSubThemes() {

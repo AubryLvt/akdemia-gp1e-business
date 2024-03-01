@@ -9,4 +9,9 @@ import af.cmr.indyli.akdemia.business.entity.Test;
  */
 public class TestFullDTO extends TestMediumDTO {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4520920175148319481L;
+
 }

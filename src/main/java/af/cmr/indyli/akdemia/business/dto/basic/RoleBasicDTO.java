@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Role;
  * entity.
  */
 public class RoleBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4328946802532864368L;
 	private Integer id;
 	private String roleName;
 	private Date creationDate;

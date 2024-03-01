@@ -11,4 +11,9 @@ import af.cmr.indyli.akdemia.business.entity.Requirement;
  * lists.
  */
 public class RequirementMediumDTO extends RequirementBasicDTO {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5161245955417280645L;
 }

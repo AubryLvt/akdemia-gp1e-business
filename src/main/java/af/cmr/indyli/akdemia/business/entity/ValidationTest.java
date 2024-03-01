@@ -15,6 +15,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_VALIDATION_TEST")
 public class ValidationTest implements IEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7864482508793024323L;
+
 	@Id
 	@Column(name = "ID")
 	private Integer id;

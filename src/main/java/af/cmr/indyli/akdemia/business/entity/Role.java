@@ -18,6 +18,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_ROLE")
 public class Role implements IEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -72253323029073521L;
+
 	@Id
 	@Column(name = "ID")
 	private Integer id;

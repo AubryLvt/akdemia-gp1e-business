@@ -12,6 +12,11 @@ import af.cmr.indyli.akdemia.business.entity.User;
  * entity, it extends {@link UserMediumDTO}.
  */
 public class UserFullDTO extends UserMediumDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3653067236876684432L;
+
 	public UserFullDTO() {
 	}
 

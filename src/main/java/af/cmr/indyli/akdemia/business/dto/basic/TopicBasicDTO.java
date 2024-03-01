@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Topic;
  * entity.
  */
 public class TopicBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2909671196140005237L;
 	private Integer id;
 	private String themeTitle;
 	private String description;

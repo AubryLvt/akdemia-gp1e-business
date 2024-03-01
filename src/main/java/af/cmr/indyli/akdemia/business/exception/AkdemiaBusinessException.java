@@ -7,6 +7,11 @@ package af.cmr.indyli.akdemia.business.exception;
 public class AkdemiaBusinessException extends Exception {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6735990145497786278L;
+
+	/**
 	 * Constructs a new AkdemiaBusinessException with the specified detail message
 	 * and cause.
 	 *

@@ -11,6 +11,10 @@ import af.cmr.indyli.akdemia.business.entity.User;
  */
 public class UserBasicDTO implements IDTO {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2321507674788869982L;
 	private Integer id;
 	private String phone;
 	private String email;

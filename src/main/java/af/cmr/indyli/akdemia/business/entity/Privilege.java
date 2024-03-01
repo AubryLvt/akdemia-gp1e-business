@@ -20,6 +20,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_PRIVILEGE")
 public class Privilege implements IEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7452511460754453314L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")

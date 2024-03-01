@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Test;
  * entity.
  */
 public class TestBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8432298215806756679L;
 	private Integer id;
 	private String name;
 	private String description;

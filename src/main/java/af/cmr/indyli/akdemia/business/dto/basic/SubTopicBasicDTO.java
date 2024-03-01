@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.SubTopic;
  * {@link SubTopic} entity.
  */
 public class SubTopicBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3665528182606070363L;
 	private Integer id;
 	private String subthemeTitle;
 	private String description;

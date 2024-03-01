@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Requirement;
  * {@link Requirement} entity.
  */
 public class RequirementBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1910379456443439938L;
 	private Integer id;
 	private String name;
 	private String description;

@@ -13,6 +13,10 @@ import af.cmr.indyli.akdemia.business.entity.SubTopic;
  */
 public class SubTopicFullDTO extends SubTopicMediumDTO {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3597928466015413620L;
 	private List<TopicBasicDTO> themes = new ArrayList<>();
 
 	public List<TopicBasicDTO> getThemes() {

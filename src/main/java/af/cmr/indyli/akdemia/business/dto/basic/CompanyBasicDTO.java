@@ -10,6 +10,10 @@ import af.cmr.indyli.akdemia.business.entity.Company;
  * {@link Company} entity. It encapsulates atomic information about a company.
  */
 public class CompanyBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private String phone;

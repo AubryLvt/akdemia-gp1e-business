@@ -19,6 +19,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_COMPANY")
 public class Company extends User implements IEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6661852400731701601L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
