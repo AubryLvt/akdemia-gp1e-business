@@ -13,6 +13,10 @@ import af.cmr.indyli.akdemia.business.entity.ValidationTest;
  */
 public class ValidationTestMediumDTO extends ValidationTestBasicDTO {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 982417367583957842L;
 	private TestBasicDTO test;
 
 	public ValidationTestMediumDTO() {

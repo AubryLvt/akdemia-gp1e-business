@@ -1,15 +1,19 @@
 package af.cmr.indyli.akdemia.business.dto.basic;
 
+import java.util.Date;
+
 import af.cmr.indyli.akdemia.business.dto.IDTO;
 import af.cmr.indyli.akdemia.business.entity.Company;
-
-import java.util.Date;
 
 /**
  * This class represents a basic Data Transfer Object (DTO) for a
  * {@link Company} entity. It encapsulates atomic information about a company.
  */
 public class CompanyBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private String phone;

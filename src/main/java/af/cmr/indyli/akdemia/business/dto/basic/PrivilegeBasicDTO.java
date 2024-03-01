@@ -1,15 +1,19 @@
 package af.cmr.indyli.akdemia.business.dto.basic;
 
+import java.util.Date;
+
 import af.cmr.indyli.akdemia.business.dto.IDTO;
 import af.cmr.indyli.akdemia.business.entity.Privilege;
-
-import java.util.Date;
 
 /**
  * This class represents a basic Data Transfer Object (DTO) for a
  * {@link Privilege} entity.
  */
 public class PrivilegeBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6080128995188947929L;
 	private Integer id;
 	private Date creationDate;
 	private Date updateDate;

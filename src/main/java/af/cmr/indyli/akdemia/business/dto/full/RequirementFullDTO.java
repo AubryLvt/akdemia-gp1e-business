@@ -8,4 +8,9 @@ import af.cmr.indyli.akdemia.business.entity.Requirement;
  * {@link Requirement} entity, it extends {@link RequirementMediumDTO}.
  */
 public class RequirementFullDTO extends RequirementMediumDTO {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7730866272531034208L;
 }

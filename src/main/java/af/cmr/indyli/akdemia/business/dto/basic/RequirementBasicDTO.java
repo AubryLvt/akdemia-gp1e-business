@@ -1,15 +1,19 @@
 package af.cmr.indyli.akdemia.business.dto.basic;
 
+import java.util.Date;
+
 import af.cmr.indyli.akdemia.business.dto.IDTO;
 import af.cmr.indyli.akdemia.business.entity.Requirement;
-
-import java.util.Date;
 
 /**
  * This class represents a basic Data Transfer Object (DTO) for a
  * {@link Requirement} entity.
  */
 public class RequirementBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1910379456443439938L;
 	private Integer id;
 	private String name;
 	private String description;

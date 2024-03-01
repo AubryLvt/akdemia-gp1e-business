@@ -9,4 +9,9 @@ import af.cmr.indyli.akdemia.business.entity.Manager;
  * entity, it extends {@link CompanyMediumDTO}.
  */
 public class ManagerFullDTO extends ManagerMediumDTO {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5683044716715091568L;
 }

@@ -1,15 +1,19 @@
 package af.cmr.indyli.akdemia.business.dto.basic;
 
+import java.util.Date;
+
 import af.cmr.indyli.akdemia.business.dto.IDTO;
 import af.cmr.indyli.akdemia.business.entity.Topic;
-
-import java.util.Date;
 
 /**
  * This class represents a basic Data Transfer Object (DTO) for a {@link Topic}
  * entity.
  */
 public class TopicBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2909671196140005237L;
 	private Integer id;
 	private String themeTitle;
 	private String description;

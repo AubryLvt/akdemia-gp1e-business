@@ -8,4 +8,9 @@ import af.cmr.indyli.akdemia.business.entity.Privilege;
  * {@link Privilege } entity, it extends {@link PrivilegeMediumDTO}.
  */
 public class PrivilegeFullDTO extends PrivilegeMediumDTO {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 261101236644858525L;
 }

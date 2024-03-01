@@ -1,15 +1,19 @@
 package af.cmr.indyli.akdemia.business.dto.basic;
 
+import java.util.Date;
+
 import af.cmr.indyli.akdemia.business.dto.IDTO;
 import af.cmr.indyli.akdemia.business.entity.Evaluation;
-
-import java.util.Date;
 
 /**
  * This class represents a basic Data Transfer Object (DTO) for a
  * {@link Evaluation} entity.
  */
 public class EvaluationBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3396199272303693682L;
 	private Integer id;
 	private Integer sessionScore;
 	private Integer trainerScore;

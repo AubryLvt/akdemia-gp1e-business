@@ -1,15 +1,19 @@
 package af.cmr.indyli.akdemia.business.dto.basic;
 
+import java.util.Date;
+
 import af.cmr.indyli.akdemia.business.dto.IDTO;
 import af.cmr.indyli.akdemia.business.entity.Test;
-
-import java.util.Date;
 
 /**
  * This class represents a basic Data Transfer Object (DTO) for a {@link Test}
  * entity.
  */
 public class TestBasicDTO implements IDTO {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8432298215806756679L;
 	private Integer id;
 	private String name;
 	private String description;

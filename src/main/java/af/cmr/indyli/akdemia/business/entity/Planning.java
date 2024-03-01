@@ -1,8 +1,12 @@
 package af.cmr.indyli.akdemia.business.entity;
 
-import jakarta.persistence.*;
-
 import java.util.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 /**
  * This class represents a Planning entity. It encapsulates information about a
@@ -11,6 +15,11 @@ import java.util.Date;
 @Entity
 @Table(name = "AKDEMIA_PLANIFICATION")
 public class Planning implements IEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6708156610051681072L;
+
 	@Id
 	@Column(name = "ID")
 	private Integer id;
