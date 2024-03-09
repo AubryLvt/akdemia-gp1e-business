@@ -15,6 +15,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_VALIDATION_TEST")
 public class ValidationTest implements IEntity {
+	
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	/**
 	 * 
 	 */
@@ -38,10 +42,24 @@ public class ValidationTest implements IEntity {
 
 	@ManyToOne
 	private Test test;
-
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
 	public ValidationTest() {
 	}
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

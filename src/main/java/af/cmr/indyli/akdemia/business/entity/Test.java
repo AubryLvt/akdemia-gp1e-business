@@ -17,6 +17,9 @@ public class Test implements IEntity {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = -6596294061124817514L;
 
 	@Id
@@ -34,7 +37,14 @@ public class Test implements IEntity {
 
 	@Column(name = "UPDATE_DATE")
 	private Date updateDate;
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

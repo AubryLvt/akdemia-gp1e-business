@@ -18,6 +18,9 @@ public class Particular extends User {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = -3927855605514477847L;
 
 	@Column(name = "FIRSTNAME")
@@ -36,10 +39,24 @@ public class Particular extends User {
 
 	@Column(name = "BIRTH_DATE")
 	private Date birthDate;
-
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
 	public Particular() {
 	}
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	public String getFirstname() {
 		return firstname;
 	}

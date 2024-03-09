@@ -19,22 +19,36 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKDEMIA_COMPANY")
 public class Company extends User implements IEntity {
+	
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = -6661852400731701601L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
 	private Integer id;
+	
 	@Column(name = "NAME")
 	private String name;
+	
 	@Column(name = "ACTIVITY")
 	private String activity;
 
 	@OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
 	private List<Employee> employees = new ArrayList<>();
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

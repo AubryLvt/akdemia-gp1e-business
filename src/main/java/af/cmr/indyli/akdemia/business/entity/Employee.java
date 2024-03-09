@@ -19,6 +19,9 @@ public class Employee extends User {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = -583808416902647841L;
 
 	@Column(name = "FIRSTNAME")
@@ -33,6 +36,30 @@ public class Employee extends User {
 	@Column(name = "HIGHEST_DIPLOMA")
 	private String highestDiploma;
 
+	@Column(name = "BIRTH_DATE")
+	private Date birthDate;
+
+	@ManyToOne
+	@JoinColumn(name = "ID_AKDEMIA_COMPANY")
+	private Company company;
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
+	public Employee() {
+	}
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	public String getHighestDiploma() {
 		return highestDiploma;
 	}
@@ -48,16 +75,7 @@ public class Employee extends User {
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
-
-	@Column(name = "BIRTH_DATE")
-	private Date birthDate;
-
-	@ManyToOne
-	@JoinColumn(name = "ID_AKDEMIA_COMPANY")
-	private Company company;
-	public Employee() {
-	}
-
+	
 	public String getFirstname() {
 		return firstname;
 	}

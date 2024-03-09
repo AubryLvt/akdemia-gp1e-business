@@ -15,6 +15,9 @@ public class Manager extends User {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = 5386288255302469764L;
 
 	@Column(name = "FIRSTNAME")
@@ -25,10 +28,24 @@ public class Manager extends User {
 
 	@Column(name = "GENDER")
 	private String gender;
-
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
 	public Manager() {
 	}
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	public String getFirstname() {
 		return firstname;
 	}
