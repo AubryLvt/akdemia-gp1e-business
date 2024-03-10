@@ -84,11 +84,11 @@ public class EmployeeSubscription implements IEntity {
 	}
 
 	// GET SET STATUS
-	public VarcharJdbcType getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(VarcharJdbcType status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 
