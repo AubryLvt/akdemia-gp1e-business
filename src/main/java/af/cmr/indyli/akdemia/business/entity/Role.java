@@ -21,6 +21,9 @@ public class Role implements IEntity {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = -72253323029073521L;
 
 	@Id
@@ -38,7 +41,14 @@ public class Role implements IEntity {
 
 	@Column(name = "UPDATE_DATE")
 	private Date updateDate;
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

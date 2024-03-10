@@ -23,6 +23,9 @@ public class Privilege implements IEntity {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = 7452511460754453314L;
 
 	@Id
@@ -45,10 +48,24 @@ public class Privilege implements IEntity {
 	@ManyToOne
 	@JoinColumn(name = "ID_AKDEMIA_ROLE")
 	private Role role;
-
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
 	public Privilege() {
 	}
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

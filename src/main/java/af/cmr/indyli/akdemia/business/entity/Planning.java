@@ -18,6 +18,9 @@ public class Planning implements IEntity {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = -6708156610051681072L;
 
 	@Id
@@ -38,11 +41,24 @@ public class Planning implements IEntity {
 
 	@ManyToOne
 	private Company company;
-
-
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
 	public Planning() {
 	}
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

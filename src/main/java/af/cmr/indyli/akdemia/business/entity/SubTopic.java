@@ -27,6 +27,9 @@ public class SubTopic implements IEntity {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = 5840616928687527039L;
 
 	@Id
@@ -50,7 +53,15 @@ public class SubTopic implements IEntity {
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "compose", joinColumns = @JoinColumn(name = "ID_AKDEMIA_SUB_THEME"), inverseJoinColumns = @JoinColumn(name = "ID"))
 	private List<Topic> topics = new ArrayList<>();
-
+	
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

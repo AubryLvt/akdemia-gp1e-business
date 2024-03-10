@@ -34,6 +34,9 @@ public class User implements IEntity, UserDetails {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = 3980039614798158622L;
 
 	@Id
@@ -68,7 +71,14 @@ public class User implements IEntity, UserDetails {
 	@JsonIgnore
 	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
 	private List<Privilege> privileges = new ArrayList<>();
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;

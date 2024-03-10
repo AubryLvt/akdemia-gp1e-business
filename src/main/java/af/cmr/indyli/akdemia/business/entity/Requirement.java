@@ -19,6 +19,9 @@ public class Requirement implements IEntity {
 	/**
 	 * 
 	 */
+	// --------------------- //
+	// ----- ATTRIBUTS ----- //
+	// --------------------- //
 	private static final long serialVersionUID = 2054188339060620420L;
 
 	@Id
@@ -40,10 +43,24 @@ public class Requirement implements IEntity {
 
 	@Column(name = "UPDATE_DATE")
 	private Date updateDate;
-
+	//
+	//
+	//
+	//
+	//
+	// -------------------- //
+	// ----- METHODES ----- //
+	// -------------------- //
 	public Requirement() {
 	}
-
+	//
+	//
+	//
+	//
+	//
+	// ----------------------------- //
+	// ----- GETTERS & SETTERS ----- //
+	// ----------------------------- //
 	@Override
 	public Integer getId() {
 		return id;
