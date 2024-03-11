@@ -13,5 +13,23 @@ import af.cmr.indyli.akdemia.business.utils.ConstsValues;
  * key.
  */
 @Repository(value = ConstsValues.ConstsDAO.PARTICULAR_DAO_KEY)
+
 public interface IParticularRepository extends JpaRepository<Particular, Integer> {
 }
+
+//JpaRepository fournit déjà plusieurs méthodes de base, telles que :
+
+//save() : Enregistre une entité particulière dans la base de données.
+//Par exemple : repository.save(particular);
+
+//findById() : Recherche une entité particulière par son identifiant.
+//Par exemple : repository.findById(id);
+
+//findAll() : Récupère toutes les entités particulières de la base de données.
+//Par exemple : repository.findAll();
+
+//delete() : Supprime une entité particulière de la base de données.
+//Par exemple : repository.delete(particular);
+
+//count() : Renvoie le nombre total d'entités particulières dans la base de données.
+//Par exemple : repository.count();
