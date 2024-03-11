@@ -6,7 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -44,7 +44,7 @@ public class Trainer extends User{
     @Column(name = "ID_AKDEMIA_VALIDATION_TEST")
     private Integer validationTestId;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "ID_AKDEMIA_VALIDATION_TEST", referencedColumnName = "ID", insertable = false, updatable = false)
     private ValidationTest validationTest;
     //
