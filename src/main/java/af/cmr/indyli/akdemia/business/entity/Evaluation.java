@@ -22,7 +22,7 @@ public class Evaluation implements IEntity {
 	// ----- ATTRIBUTS ----- //
 	// --------------------- //
 	private static final long serialVersionUID = -6773229990792510372L;
-
+	
 	@Id
 	@Column(name = "ID")
 	private Integer id;
