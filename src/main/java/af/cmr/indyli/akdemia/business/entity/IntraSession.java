@@ -1,6 +1,5 @@
 package af.cmr.indyli.akdemia.business.entity;
 
-import org.springframework.boot.autoconfigure.jms.JmsProperties.Listener.Session;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
