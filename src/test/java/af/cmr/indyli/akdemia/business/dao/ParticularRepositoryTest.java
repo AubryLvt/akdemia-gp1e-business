@@ -1,10 +1,13 @@
 package af.cmr.indyli.akdemia.business.dao;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,31 +15,56 @@ import org.springframework.test.context.ContextConfiguration;
 import af.cmr.indyli.akdemia.business.config.AkdemiaBusinessGp1eConfig;
 import af.cmr.indyli.akdemia.business.dto.full.ParticularFullDTO;
 import af.cmr.indyli.akdemia.business.entity.Particular;
+import af.cmr.indyli.akdemia.business.exception.AkdemiaBusinessException;
 import af.cmr.indyli.akdemia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 
-@ContextConfiguration(classes={AkdemiaBusinessGp1eConfig.class})
+@ContextConfiguration(classes = { AkdemiaBusinessGp1eConfig.class })
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-
 public class ParticularRepositoryTest {
-	
-	@Resource(name = ConstsValues.ServiceKeys.PARTICULAR_SERVICE_KEY)
-    private IParticularRepository sampleParticularRepository;
 
-    private Particular sampleParticular;
-    
-    
-    /**
-     * Méthode setUp() : Initialise un objet Particular de test.
-     */
-    @BeforeEach
-    void setUp() {
-        sampleParticular = getSampleParticular(); // Crée un objet Particular de test grâce à une méthode du DTO
-        sampleParticularRepository.save(sampleParticular); // Enregistre l'objet dans la base de données.
-        assertNotNull(sampleParticular.getId()); // Vérifie que l'identifiant généré n'est pas nul.
-    }
-    
+//	@Resource(name = ConstsValues.ServiceKeys.PARTICULAR_SERVICE_KEY)
+// => l'annotation genere une erreur
+	@Autowired
+	private IParticularRepository sampleParticularRepository;
+
+	private ParticularFullDTO particularForAllTest = null;
+
+	private Integer idCreatedParticular = null;
+
+	/**
+	 * Méthode setUp() : Initialise un objet Particular de test.
+	 */
+//    @BeforeEach
+//    void setUp()  throws AkdemiaBusinessException {
+//		ParticularFullDTO particular = getSampleParticular();
+//
+//		this.particularForAllTest = this.sampleParticularRepository.save(particular);
+//
+//		assertNotNull(particular);
+//    	
+//    }
+
+	@Test
+	void testCreateParticular() throws AkdemiaBusinessException {
+
+		Particular sampleParticular = new Particular();
+
+		sampleParticular.setEmail("particular@gmail.com");
+		sampleParticular.setFirstname("John");
+		sampleParticular.setLastname("Doe");
+		sampleParticular.setGender("Male");
+		sampleParticular.setActivity("Software Engineer");
+		sampleParticular.setHighestDiploma("Master's Degree in Computer Science");
+		sampleParticular.setBirthDate(new Date());
+
+		sampleParticular = this.sampleParticularRepository.save(sampleParticular);
+		idCreatedParticular = sampleParticular.getId();
+
+		assertNotNull(sampleParticular);
+	}
+
 	ParticularFullDTO getSampleParticular() throws ParseException {
 		ParticularFullDTO user = new ParticularFullDTO();
 		user.setPhone("123456789");
@@ -50,15 +78,11 @@ public class ParticularRepositoryTest {
 		user.setFirstname("John");
 		user.setLastname("Doe");
 		user.setGender("M");
-	    user.setActivity("Professional Developer");
-	    user.setHighestDiploma("Master's Degree");
-	    user.setBirthDate(new SimpleDateFormat("yyyy-MM-dd").parse("1990-05-15"));
+		user.setActivity("Professional Developer");
+		user.setHighestDiploma("Master's Degree");
+		user.setBirthDate(new SimpleDateFormat("yyyy-MM-dd").parse("1990-05-15"));
 
 		return user;
 	}
-    
-    
-
-
 
 }

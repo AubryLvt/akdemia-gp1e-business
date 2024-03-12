@@ -9,9 +9,10 @@ import af.cmr.indyli.akdemia.business.utils.ConstsValues;
 /**
  * This interface serves as a repository for managing {@link Particular}
  * entities in the database. It extends JpaRepository, providing CRUD operations
- * for the {@link Particular} entity with Integer as the type of its primary
+ * for the Particular entity with Integer as the type of its primary
  * key.
  */
+
 @Repository(value = ConstsValues.ConstsDAO.PARTICULAR_DAO_KEY)
 
 public interface IParticularRepository extends JpaRepository<Particular, Integer> {

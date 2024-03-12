@@ -11,6 +11,8 @@ import af.cmr.indyli.akdemia.business.utils.ConstsValues;
  * in the database. It extends JpaRepository, providing CRUD operations for the
  * Company entity with Integer as the type of its primary key.
  */
+
 @Repository(value = ConstsValues.ConstsDAO.COMPANY_DAO_KEY)
+
 public interface ICompanyRepository extends JpaRepository<Company, Integer> {
 }
