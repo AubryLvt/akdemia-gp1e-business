@@ -5,6 +5,7 @@ import java.util.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -40,8 +41,9 @@ public class ValidationTest implements IEntity {
 	@Column(name = "UPDATE_DATE")
 	private Date updateDate;
 
-	@ManyToOne
-	private Test test;
+    @ManyToOne
+    @JoinColumn(name="ID_AKDEMIA_TEST")
+    private Test test;
 	//
 	//
 	//
