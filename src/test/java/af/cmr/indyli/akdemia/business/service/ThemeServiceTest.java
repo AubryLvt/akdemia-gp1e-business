@@ -25,7 +25,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ThemeServiceTest {
 
 	@Resource(name = ConstsValues.ServiceKeys.TOPIC_SERVICE_KEY)
+	
 	private ITopicService topicService;
+	
 	private TopicFullDTO themeForAllTest = null;
 
 	private Integer idCreatedTheme = null;
