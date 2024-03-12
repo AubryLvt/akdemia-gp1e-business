@@ -13,9 +13,14 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "AKDEMIA_SESSION")
-public class Session {
+public class Session implements IEntity{
 	
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6183410770871409003L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Integer id;

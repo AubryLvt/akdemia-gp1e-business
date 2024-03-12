@@ -26,6 +26,7 @@ public class ConstsValues {
 		public static final String TEST_DAO_KEY = "testDAO";
 		public static final String VALIDATION_TEST_DAO_KEY = "validationTestDAO";
 		public static final String USER_DAO_KEY = "userDAO";
+		public static final String SESSION_DAO_KEY = "sessionDAO";
 	}
 
 	/**
@@ -48,6 +49,9 @@ public class ConstsValues {
 		public static final String PLANNING_SERVICE_KEY = "planningService";
 		public static final String USER_SERVICE_KEY = "userService";
 		public static final String USER_SERVICE = "userAuthService";
+		public static final String SESSION_SERVICE_KEY = "sessionService";
+		public static final String SESSION_SERVICE = "sessionAuthService";
+		
 
 	}
 
