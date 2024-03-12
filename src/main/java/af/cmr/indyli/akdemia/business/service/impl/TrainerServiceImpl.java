@@ -25,7 +25,6 @@ public class TrainerServiceImpl
 	@Resource(name = ConstsValues.ConstsDAO.TRAINER_DAO_KEY)
 	private ITrainerRepository trainerRepository;
 
-	
 	public TrainerServiceImpl() {
 		super(Trainer.class, TrainerBasicDTO.class, TrainerFullDTO.class);
 	}
