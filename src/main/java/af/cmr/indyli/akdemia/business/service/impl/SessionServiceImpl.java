@@ -18,9 +18,6 @@ public class SessionServiceImpl
 	@Resource(name = ConstsValues.ConstsDAO.SESSION_DAO_KEY)
 	private ISessionRepository sessionRepository;
 
-	@Resource(name = ConstsValues.ServiceKeys.SESSION_SERVICE_KEY)
-	private ISessionService sessionService;
-
 	public SessionServiceImpl() {
 		super(Session.class, SessionBasicDTO.class, SessionFullDTO.class);
 
