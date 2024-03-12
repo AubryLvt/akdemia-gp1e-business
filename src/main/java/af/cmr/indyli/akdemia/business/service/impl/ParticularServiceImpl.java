@@ -19,32 +19,40 @@ import af.cmr.indyli.akdemia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 
 /**
- * Service implementation class for managing {@link Particular} entity,
- * extending the AbstractAkdemiaServiceImpl class. This class provides specific
- * functionality for managing particular, including CRUD operations and
- * validation.
+ * Classe d'implémentation du service pour la gestion de l'entité Particular, 
+ * étendant la classe AbstractAkdemiaServiceImpl. 
+ * Cette classe fournit des fonctionnalités spécifiques pour la gestion des entités Particular, 
+ * y compris les opérations CRUD et la validation.
  *
- * @see AbstractAkdemiaServiceImpl
+ * @see AbstractAkdemiaServiceImpl Classe abstraite pour les services Akdemia
  */
+
 @Service(ConstsValues.ServiceKeys.PARTICULAR_SERVICE_KEY)
+
 public class ParticularServiceImpl
 		extends AbstractAkdemiaServiceImpl<Particular, ParticularBasicDTO, ParticularFullDTO, IParticularRepository>
 		implements IParticularService {
+	
+	// Injection du repository spécifique pour l'entité Particular
 	@Resource(name = ConstsValues.ConstsDAO.PARTICULAR_DAO_KEY)
 	private IParticularRepository particularRepository;
 
+	// Injection du userservice pour les opérations liées aux utilisateurs
 	@Resource(name = ConstsValues.ServiceKeys.USER_SERVICE_KEY)
 	private IUserService userService;
 
+	// Constructeur par défaut, configurant les types des entités et DTO associés
 	public ParticularServiceImpl() {
 		super(Particular.class, ParticularBasicDTO.class, ParticularFullDTO.class);
 	}
 
+	// Méthode permettant d'obtenir le repository associé à l'entité Particular
 	@Override
 	public IParticularRepository getDAO() {
 		return this.particularRepository;
 	}
 
+	// CREATE : implémentation de la création d'une entité ParticularFullDTO avec validation
 	@Override
 	public ParticularFullDTO create(ParticularFullDTO view) throws AkdemiaBusinessException {
 		if (!userService.isExistUserByEmail(view.getEmail())) {
@@ -56,6 +64,7 @@ public class ParticularServiceImpl
 		throw new AkdemiaBusinessException(ConstBusinessRules.RG02);
 	}
 
+	// UPDATE : implémentation de la mise à jour d'une entité ParticularFullDTO avec validation
 	@Override
 	public ParticularFullDTO update(ParticularFullDTO viewToUpdate)
 			throws AkdemiaBusinessException, AccessDeniedException {
@@ -73,6 +82,7 @@ public class ParticularServiceImpl
 		throw new AkdemiaBusinessException(ConstBusinessRules.RG02);
 	}
 
+	// DELETE : implémentation de la suppression d'une entité ParticularFullDTO avec validation
 	@Override
 	public void deleteById(int id) throws AkdemiaBusinessException, AccessDeniedException {
 		var tmpParticipant = this.findById(id);
