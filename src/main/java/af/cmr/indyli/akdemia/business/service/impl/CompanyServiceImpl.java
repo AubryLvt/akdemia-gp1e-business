@@ -29,6 +29,7 @@ import jakarta.annotation.Resource;
 public class CompanyServiceImpl
 		extends AbstractAkdemiaServiceImpl<Company, CompanyBasicDTO, CompanyFullDTO, ICompanyRepository>
 		implements ICompanyService {
+	
 	@Resource(name = ConstsValues.ConstsDAO.COMPANY_DAO_KEY)
 	private ICompanyRepository companyRepository;
 
