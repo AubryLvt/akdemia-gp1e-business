@@ -12,6 +12,7 @@ public class ConstsValues {
 	 * Each key represents a specific DAO used for database access.
 	 */
 	public static final class ConstsDAO {
+<<<<<<< src/main/java/af/cmr/indyli/akdemia/business/utils/ConstsValues.java
 		public static final String COMPANY_DAO_KEY 			= "companyDAO";
 		public static final String EMPLOYEE_DAO_KEY 		= "employeeDAO";
 		public static final String EVALUATION_DAO_KEY 		= "evaluationDAO";
@@ -26,8 +27,10 @@ public class ConstsValues {
 		public static final String TEST_DAO_KEY 			= "testDAO";
 		public static final String VALIDATION_TEST_DAO_KEY 	= "validationTestDAO";
 		public static final String USER_DAO_KEY 			= "userDAO";
-		
+		public static final String SESSION_DAO_KEY          = "sessionDAO";
 		public static final String TRAINER_DAO_KEY 			= "trainerDAO";
+
+>>>>>>> src/main/java/af/cmr/indyli/akdemia/business/utils/ConstsValues.java
 	}
 
 	/**
@@ -35,6 +38,7 @@ public class ConstsValues {
 	 * Each key represents a specific service used for business logic.
 	 */
 	public static final class ServiceKeys {
+<<<<<<< src/main/java/af/cmr/indyli/akdemia/business/utils/ConstsValues.java
 		public static final String COMPANY_SERVICE_KEY 			= "companyService";
 		public static final String EMPLOYEE_SERVICE_KEY 		= "employeeService";
 		public static final String EVALUATION_SERVICE_KEY 		= "evaluationService";
@@ -50,8 +54,9 @@ public class ConstsValues {
 		public static final String PLANNING_SERVICE_KEY 		= "planningService";
 		public static final String USER_SERVICE_KEY 			= "userService";
 		public static final String USER_SERVICE 				= "userAuthService";
-		
+		public static final String SESSION_SERVICE_KEY          = "sessionService";
 		public static final String TRAINER_SERVICE_KEY 			= "trainerService";
+>>>>>>> src/main/java/af/cmr/indyli/akdemia/business/utils/ConstsValues.java
 	}
 
 }
