@@ -12,8 +12,9 @@ import af.cmr.indyli.akdemia.business.utils.ConstsValues;
  * in the database. It extends JpaRepository, providing CRUD operations for the
  * {@link Employee} entity with Integer as the type of its primary key.
  */
-@Repository(value = ConstsValues.ConstsDAO.EMPLOYEE_DAO_KEY)
-public interface IEmployeeRepository extends JpaRepository<Employee, Integer> {
 
-	public Employee findByCompany(Company company);
+@Repository(value = ConstsValues.ConstsDAO.EMPLOYEE_DAO_KEY)
+
+public interface IEmployeeRepository extends JpaRepository<Employee, Integer> {
+	public Employee findByCompany(Company company);	
 }
