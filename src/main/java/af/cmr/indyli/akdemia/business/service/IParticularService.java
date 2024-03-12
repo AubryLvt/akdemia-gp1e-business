@@ -6,10 +6,16 @@ import af.cmr.indyli.akdemia.business.dto.full.ParticularFullDTO;
 import af.cmr.indyli.akdemia.business.entity.Particular;
 
 /**
- * Interface extending the IAbstractAkdemiaService interface for managing
- * particular, providing specific operations for {@link Particular} entities.
+ * Interface étendant l'interface IAbstractAkdemiaService pour la gestion des
+ * entités "Particular", fournissant des opérations spécifiques pour les entités
+ * de type Particular.
  *
- * @see IAbstractAkdemiaService
+ * Cette interface permet de définir les méthodes nécessaires pour la gestion
+ * des opérations liées à l'entité Particular, en utilisant les classes DTO
+ * (ParticularBasicDTO et ParticularFullDTO) et le repository spécifique
+ * (IParticularRepository).
+ *
+ * @see IAbstractAkdemiaService Interface générale pour les services Akdemia
  */
 public interface IParticularService
 		extends IAbstractAkdemiaService<Particular, ParticularBasicDTO, ParticularFullDTO, IParticularRepository> {

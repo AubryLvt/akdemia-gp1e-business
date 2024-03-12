@@ -24,8 +24,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @ContextConfiguration(classes={AkdemiaBusinessGp1eConfig.class})
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+
 public class CompanyServiceTest {
 	@Resource(name = ConstsValues.ServiceKeys.COMPANY_SERVICE_KEY)
+	
 	private ICompanyService companyService;
 
 	private CompanyFullDTO companyForAllTest = null;
