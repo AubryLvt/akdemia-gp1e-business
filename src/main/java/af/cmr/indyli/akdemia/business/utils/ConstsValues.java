@@ -31,6 +31,9 @@ public class ConstsValues {
 		public static final String TRAINING_DAO_KEY 		= "trainingDAO";
 		public static final String INTER_SESSION_DAO_KEY 	= "interSessionDAO";
 		public static final String INTRA_SESSION_DAO_KEY 	= "intraSessionDAO";
+		public static final String PARTICULAR_SUBSCRIPTION_DAO_KEY 		= "particularSubscriptionDAO";
+		public static final String EMPLOYEE_SUBSCRIPTION_DAO_KEY 		= "employeeSubscriptionDAO";
+
 	}
 
 	/**
@@ -59,5 +62,8 @@ public class ConstsValues {
 		public static final String TRAINING_SERVICE_KEY 		= "trainingService";
 		public static final String INTER_SESSION_SERVICE_KEY 	= "interSessionService";
 		public static final String INTRA_SESSION_SERVICE_KEY 	= "intraSessionService";
+		public static final String PARTICULAR_SUBSCRIPTION_SERVICE_KEY 		= "particularSubscriptionService";
+		public static final String EMPLOYEE_SUBSCRIPTION_SERVICE_KEY 		= "employeeSubscriptionService";
+
 	}
 }
