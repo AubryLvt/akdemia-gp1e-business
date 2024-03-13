@@ -9,6 +9,7 @@ public class ConstsValues {
 	 * Chaque clé représente un DAO spécifique utilisé pour l'accès à la base de données.
 	 */
 	public static final class ConstsDAO {
+		// Clés constantes pour les DAO
 		public static final String COMPANY_DAO_KEY 			= "companyDAO";
 		public static final String EMPLOYEE_DAO_KEY 		= "employeeDAO";
 		public static final String EVALUATION_DAO_KEY 		= "evaluationDAO";
@@ -34,6 +35,7 @@ public class ConstsValues {
 	 * Chaque clé représente un service spécifique utilisé pour la logique métier.
 	 */
 	public static final class ServiceKeys {
+		// Clés constantes pour les services
 		public static final String COMPANY_SERVICE_KEY 			= "companyService";
 		public static final String EMPLOYEE_SERVICE_KEY 			= "employeeService";
 		public static final String EVALUATION_SERVICE_KEY 		= "evaluationService";
