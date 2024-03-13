@@ -1,3 +1,5 @@
+package af.cmr.indyli.akdemia.business.utils;
+
 /**
  * Cette classe contient des valeurs constantes utilisées comme clés pour les DAO et les services dans l'application Akdemia.
  * Elle organise ces clés en classes imbriquées pour les DAO et les clés de service.
@@ -27,6 +29,9 @@ public class ConstsValues {
 		public static final String TRAINER_DAO_KEY 			= "trainerDAO";
 		public static final String INTER_SESSION_DAO_KEY 	= "interSessionDAO";
 		public static final String INTRA_SESSION_DAO_KEY 	= "intraSessionDAO";
+		public static final String PARTICULAR_SUBSCRIPTION_DAO_KEY 		= "particularSubscriptionDAO";
+		public static final String EMPLOYEE_SUBSCRIPTION_DAO_KEY 		= "employeeSubscriptionDAO";
+
 	}
 
 	/**
@@ -53,5 +58,7 @@ public class ConstsValues {
 		public static final String TRAINER_SERVICE_KEY 			= "trainerService";
 		public static final String INTER_SESSION_SERVICE_KEY 		= "interSessionService";
 		public static final String INTRA_SESSION_SERVICE_KEY 		= "intraSessionService";
+		public static final String PARTICULAR_SUBSCRIPTION_SERVICE_KEY 		= "particularSubscriptionService";
+		public static final String EMPLOYEE_SUBSCRIPTION_SERVICE_KEY 		= "employeeSubscriptionService";
 	}
 }

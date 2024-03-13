@@ -29,10 +29,13 @@ import jakarta.annotation.Resource;
  *
  * @see AbstractAkdemiaServiceImpl
  */
+
 @Service(ConstsValues.ServiceKeys.EMPLOYEE_SERVICE_KEY)
+
 public class EmployeeServiceImpl
 		extends AbstractAkdemiaServiceImpl<Employee, EmployeeBasicDTO, EmployeeFullDTO, IEmployeeRepository>
 		implements IEmployeeService {
+	
 	@Resource(name = ConstsValues.ConstsDAO.EMPLOYEE_DAO_KEY)
 	private IEmployeeRepository employeeRepository;
 
