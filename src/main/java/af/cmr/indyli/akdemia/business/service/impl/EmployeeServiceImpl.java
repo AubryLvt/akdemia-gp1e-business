@@ -66,6 +66,7 @@ public class EmployeeServiceImpl
 	public EmployeeFullDTO create(EmployeeFullDTO view) throws AkdemiaBusinessException {
 		if (!userService.isExistUserByEmail(view.getEmail())) {
 			view.setCreationDate(new Date());
+			
 			Employee entity = this.getDAO().saveAndFlush(this.getModelMapper().map(view, Employee.class));
 
 			return this.getModelMapper().map(entity, EmployeeFullDTO.class);
