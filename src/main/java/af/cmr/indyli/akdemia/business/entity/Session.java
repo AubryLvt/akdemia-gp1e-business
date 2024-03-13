@@ -4,15 +4,20 @@ import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "AKDEMIA_SESSION")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Session implements IEntity{
 	
     /**
@@ -36,9 +41,10 @@ public class Session implements IEntity{
 
     @Column(name = "DESCRIPTION")
     private String description;
-
+   
     @Column(name = "STATUS")
-    private String status;
+    @Enumerated(EnumType.STRING) // Indique à Hibernate de persister le champ enum en tant que chaînes (VARCHAR) dans la base de données
+    private Status status;
 
     @Column(name = "DATE")
     private Date date;
@@ -110,12 +116,12 @@ public class Session implements IEntity{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public String getStatus() {
+	
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 

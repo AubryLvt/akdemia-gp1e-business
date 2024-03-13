@@ -3,6 +3,7 @@ package af.cmr.indyli.akdemia.business.dto.basic;
 import java.util.Date;
 
 import af.cmr.indyli.akdemia.business.dto.IDTO;
+import af.cmr.indyli.akdemia.business.entity.Status;
 
 public class SessionBasicDTO implements IDTO{
 	
@@ -15,7 +16,7 @@ public class SessionBasicDTO implements IDTO{
 	private Double duration;
 	private Double price;
 	private String description;
-	private String status;
+	private Status status;
 	private Date date;
 	private String location;
 	private Date creationDate;
@@ -24,41 +25,87 @@ public class SessionBasicDTO implements IDTO{
 	public SessionBasicDTO() {
 	}
 
-	@Override
 	public Integer getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return id;
 	}
 
-	@Override
 	public void setId(Integer id) {
-		// TODO Auto-generated method stub
-		
+		this.id = id;
 	}
 
-	@Override
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public Double getDuration() {
+		return duration;
+	}
+
+	public void setDuration(Double duration) {
+		this.duration = duration;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
 	public Date getCreationDate() {
-		// TODO Auto-generated method stub
-		return null;
+		return creationDate;
 	}
 
-	@Override
 	public void setCreationDate(Date creationDate) {
-		// TODO Auto-generated method stub
-		
+		this.creationDate = creationDate;
 	}
 
-	@Override
 	public Date getUpdateDate() {
-		// TODO Auto-generated method stub
-		return null;
+		return updateDate;
 	}
 
-	@Override
-	public void setUpdateDate(Date creationDate) {
-		// TODO Auto-generated method stub
-		
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
+
+	
 
 
 }

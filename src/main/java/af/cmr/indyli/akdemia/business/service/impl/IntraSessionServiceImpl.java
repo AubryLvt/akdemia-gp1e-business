@@ -1,5 +1,7 @@
 package af.cmr.indyli.akdemia.business.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import af.cmr.indyli.akdemia.business.dao.IIntraSessionRepository;
 import af.cmr.indyli.akdemia.business.dao.ITrainerRepository;
 import af.cmr.indyli.akdemia.business.dto.basic.IntraSessionBasicDTO;
@@ -9,6 +11,7 @@ import af.cmr.indyli.akdemia.business.service.IIntraSessionService;
 import af.cmr.indyli.akdemia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 
+@Service(ConstsValues.ServiceKeys.INTRA_SESSION_SERVICE_KEY)
 public class IntraSessionServiceImpl 
 	extends AbstractAkdemiaServiceImpl<IntraSession, IntraSessionBasicDTO, IntraSessionFullDTO, IIntraSessionRepository>
 	implements IIntraSessionService{
