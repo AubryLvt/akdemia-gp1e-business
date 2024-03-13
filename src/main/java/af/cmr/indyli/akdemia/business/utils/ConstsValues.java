@@ -1,3 +1,5 @@
+package af.cmr.indyli.akdemia.business.utils;
+
 /**
  * Cette classe contient des valeurs constantes utilisées comme clés pour les DAO et les services dans l'application Akdemia.
  * Elle organise ces clés en classes imbriquées pour les DAO et les clés de service.
