@@ -13,11 +13,10 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "AKDEMIA_TRAINING")
-public class Training {
+public class Training implements IEntity {
 	
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = -7390571978612902184L;
+
 	// --------------------- //
 	// ----- ATTRIBUTS ----- //
 	// --------------------- //
