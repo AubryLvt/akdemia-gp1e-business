@@ -11,7 +11,9 @@ import af.cmr.indyli.akdemia.business.utils.ConstsValues;
  * the database. It extends JpaRepository, providing CRUD operations for the
  * {@link Topic} entity with Integer as the type of its primary key.
  */
+
 @Repository(value = ConstsValues.ConstsDAO.TOPIC_DAO_KEY)
+
 public interface ITopicRepository extends JpaRepository<Topic, Integer> {
 	Topic findByThemeTitle(String themeTitle);
 }

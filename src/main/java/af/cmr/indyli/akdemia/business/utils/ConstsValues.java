@@ -1,17 +1,15 @@
-package af.cmr.indyli.akdemia.business.utils;
-
 /**
- * This class contains constant values used as keys for DAOs and services in the
- * Akdemia application. It organizes these keys into nested classes for DAOs and
- * service keys.
+ * Cette classe contient des valeurs constantes utilisées comme clés pour les DAO et les services dans l'application Akdemia.
+ * Elle organise ces clés en classes imbriquées pour les DAO et les clés de service.
  */
 public class ConstsValues {
 
 	/**
-	 * This inner class contains constant keys for DAOs used in the application.
-	 * Each key represents a specific DAO used for database access.
+	 * Cette classe interne contient des clés constantes pour les DAO utilisés dans l'application.
+	 * Chaque clé représente un DAO spécifique utilisé pour l'accès à la base de données.
 	 */
 	public static final class ConstsDAO {
+		// Clés constantes pour les DAO
 		public static final String COMPANY_DAO_KEY 			= "companyDAO";
 		public static final String EMPLOYEE_DAO_KEY 		= "employeeDAO";
 		public static final String EVALUATION_DAO_KEY 		= "evaluationDAO";
@@ -29,13 +27,16 @@ public class ConstsValues {
 		public static final String SESSION_DAO_KEY 			= "sessionDAO";
 		public static final String TRAINER_DAO_KEY 			= "trainerDAO";
 		public static final String TRAINING_DAO_KEY 		= "trainingDAO";
+		public static final String INTER_SESSION_DAO_KEY 	= "interSessionDAO";
+		public static final String INTRA_SESSION_DAO_KEY 	= "intraSessionDAO";
 	}
 
 	/**
-	 * This inner class contains constant keys for services used in the application.
-	 * Each key represents a specific service used for business logic.
+	 * Cette classe interne contient des clés constantes pour les services utilisés dans l'application.
+	 * Chaque clé représente un service spécifique utilisé pour la logique métier.
 	 */
 	public static final class ServiceKeys {
+		// Clés constantes pour les services
 		public static final String COMPANY_SERVICE_KEY 			= "companyService";
 		public static final String EMPLOYEE_SERVICE_KEY 		= "employeeService";
 		public static final String EVALUATION_SERVICE_KEY 		= "evaluationService";
@@ -54,6 +55,7 @@ public class ConstsValues {
 		public static final String SESSION_SERVICE_KEY 			= "sessionService";
 		public static final String TRAINER_SERVICE_KEY 			= "trainerService";
 		public static final String TRAINING_SERVICE_KEY 		= "trainingService";
+		public static final String INTER_SESSION_SERVICE_KEY 	= "interSessionService";
+		public static final String INTRA_SESSION_SERVICE_KEY 	= "intraSessionService";
 	}
-
 }
