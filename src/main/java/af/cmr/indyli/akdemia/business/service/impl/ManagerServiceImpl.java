@@ -30,8 +30,10 @@ import jakarta.annotation.Resource;
 public class ManagerServiceImpl
 		extends AbstractAkdemiaServiceImpl<Manager, ManagerBasicDTO, ManagerFullDTO, IManagerRepository>
 		implements IManagerService {
+	
 	@Resource(name = ConstsValues.ConstsDAO.MANAGER_DAO_KEY)
 	private IManagerRepository managerRepository;
+	
 	@Resource(name = ConstsValues.ServiceKeys.USER_SERVICE_KEY)
 	private IUserService userService;
 
