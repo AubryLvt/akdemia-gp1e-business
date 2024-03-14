@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -41,9 +42,11 @@ public class EmployeeSubscription implements IEntity {
 	private Date updateDate;
 	
 	@ManyToOne
+    @JoinColumn(name = "ID_AKDEMIA_INTRA_SESSION", referencedColumnName = "ID", insertable = false, updatable = false)
 	private IntraSession intraSession;
 	
 	@ManyToOne
+    @JoinColumn(name = "ID_AKDEMIA_EMPLOYEE", referencedColumnName = "ID", insertable = false, updatable = false)
 	private Employee employee;
 	
 	// ----------------------------- //

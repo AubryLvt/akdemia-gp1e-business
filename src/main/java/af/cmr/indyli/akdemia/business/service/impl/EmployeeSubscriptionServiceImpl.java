@@ -2,6 +2,8 @@ package af.cmr.indyli.akdemia.business.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import af.cmr.indyli.akdemia.business.dao.IEmployeeSubscriptionRepository;
 import af.cmr.indyli.akdemia.business.dto.basic.EmployeeSubscriptionBasicDTO;
 import af.cmr.indyli.akdemia.business.dto.full.EmployeeSubscriptionFullDTO;
@@ -10,6 +12,7 @@ import af.cmr.indyli.akdemia.business.service.IEmployeeSubscriptionService;
 import af.cmr.indyli.akdemia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 
+@Service(ConstsValues.ServiceKeys.EMPLOYEE_SUBSCRIPTION_SERVICE_KEY)
 public class EmployeeSubscriptionServiceImpl extends
 		AbstractAkdemiaServiceImpl<EmployeeSubscription, EmployeeSubscriptionBasicDTO, EmployeeSubscriptionFullDTO, IEmployeeSubscriptionRepository>
 		implements IEmployeeSubscriptionService {
