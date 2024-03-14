@@ -1,16 +1,12 @@
 package af.cmr.indyli.akdemia.business.service.impl;
 
-import java.util.Date;
-
 import org.springframework.stereotype.Service;
 
 import af.cmr.indyli.akdemia.business.dao.IInterSessionRepository;
 import af.cmr.indyli.akdemia.business.dto.basic.InterSessionBasicDTO;
 import af.cmr.indyli.akdemia.business.dto.full.InterSessionFullDTO;
 import af.cmr.indyli.akdemia.business.entity.InterSession;
-import af.cmr.indyli.akdemia.business.exception.AkdemiaBusinessException;
 import af.cmr.indyli.akdemia.business.service.IInterSessionService;
-import af.cmr.indyli.akdemia.business.utils.ConstBusinessRules;
 import af.cmr.indyli.akdemia.business.utils.ConstsValues;
 import jakarta.annotation.Resource;
 
@@ -30,7 +26,6 @@ public class InterSessionServiceImpl
 
 	@Override
 	public IInterSessionRepository getDAO() {
-		// TODO Auto-generated method stub
 		return this.interSessionRepository;
 	}
 

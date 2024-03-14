@@ -15,7 +15,9 @@ import jakarta.persistence.Table;
 @Table(name = "AKDEMIA_INTER_SESSION")
 public class InterSession extends Session {
 	
+	// Attributs
 	private static final long serialVersionUID = 8118618633104493484L;
+	
     @Column(name = "MIN_PARTICIPANTS")
     private int minParticipants;
 
@@ -23,6 +25,23 @@ public class InterSession extends Session {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID")
 	private Integer id;
+    
+    @OneToMany(mappedBy = "interSession", fetch = FetchType.EAGER)
+	private List<ParticularSubscription> particularSubscription = new ArrayList<>();
+    
+	// Constructeur par défaut
+    public InterSession() {
+    }
+
+    // Constructeur avec paramètres
+    public InterSession(int minParticipants) {
+        super();/* passer les paramètres hérités à travers le constructeur de la classe parente */
+        this.minParticipants = minParticipants;
+    }
+    
+
+	// ----- GETTERS & SETTERS ----- //
+
     @Override
     public Integer getId() {
 		return id;
@@ -41,21 +60,7 @@ public class InterSession extends Session {
 		this.particularSubscription = particularSubscription;
 	}
 
-	// Constructeur par défaut
-    public InterSession() {
-    }
-
-    // Constructeur avec paramètres
-    public InterSession(int minParticipants) {
-        super();/* passer les paramètres hérités à travers le constructeur de la classe parente */
-        this.minParticipants = minParticipants;
-    }
-
-   //  Getters et Setters
-    
-    @OneToMany(mappedBy = "interSession", fetch = FetchType.EAGER)
-	private List<ParticularSubscription> particularSubscription = new ArrayList<>();
-    
+   
     public int getMinParticipants() {
         return minParticipants;
     }

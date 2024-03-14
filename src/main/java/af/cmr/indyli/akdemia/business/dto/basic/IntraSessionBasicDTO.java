@@ -17,19 +17,18 @@ public class IntraSessionBasicDTO implements IDTO {
 	private String location;
 	private Date creationDate;
 	private Date updateDate;
+	
 	@Override
 	public Integer getId() {
-		// TODO Auto-generated method stub
 		return id;
 	}
 	@Override
 	public void setId(Integer id) {
-		// TODO Auto-generated method stub
 		this.id = id;
 	}
 	@Override
 	public Date getCreationDate() {
-		return date;
+		return creationDate;
 	}
 	@Override
 	public void setCreationDate(Date creationDate) {
@@ -42,6 +41,48 @@ public class IntraSessionBasicDTO implements IDTO {
 	@Override
 	public void setUpdateDate(Date creationDate) {
 		this.updateDate = creationDate;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public Double getDuration() {
+		return duration;
+	}
+	public void setDuration(Double duration) {
+		this.duration = duration;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 }

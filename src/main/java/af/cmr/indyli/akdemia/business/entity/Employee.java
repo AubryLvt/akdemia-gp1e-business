@@ -1,11 +1,15 @@
 package af.cmr.indyli.akdemia.business.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 /**
@@ -16,9 +20,6 @@ import jakarta.persistence.Table;
 @Table(name = "AKDEMIA_EMPLOYEE")
 public class Employee extends User {
 
-	/**
-	 * 
-	 */
 	// --------------------- //
 	// ----- ATTRIBUTS ----- //
 	// --------------------- //
@@ -42,11 +43,10 @@ public class Employee extends User {
 	@ManyToOne
 	@JoinColumn(name = "ID_AKDEMIA_COMPANY")
 	private Company company;
-	//
-	//
-	//
-	//
-	//
+	
+	@OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
+	private List<EmployeeSubscription> employeeSubscription = new ArrayList<>();
+
 	// -------------------- //
 	// ----- METHODES ----- //
 	// -------------------- //
