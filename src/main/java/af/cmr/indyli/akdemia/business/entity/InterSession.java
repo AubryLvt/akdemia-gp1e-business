@@ -1,31 +1,58 @@
 package af.cmr.indyli.akdemia.business.entity;
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
 @Entity
-@Table(name = "akdemia_inter_session")
+@Table(name = "AKDEMIA_INTER_SESSION")
 public class InterSession extends Session {
-// AJOUT SERIAL ID
+	
+	private static final long serialVersionUID = 8118618633104493484L;
     @Column(name = "MIN_PARTICIPANTS")
     private int minParticipants;
 
-    // Constructeur par défaut
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ID")
+	private Integer id;
+    public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public List<ParticularSubscription> getParticularSubscription() {
+		return particularSubscription;
+	}
+
+	public void setParticularSubscription(List<ParticularSubscription> particularSubscription) {
+		this.particularSubscription = particularSubscription;
+	}
+
+	// Constructeur par défaut
     public InterSession() {
     }
 
     // Constructeur avec paramètres
-    public InterSession(int minParticipants /* autres paramètres hérités de Session */) {
+    public InterSession(int minParticipants) {
         super();/* passer les paramètres hérités à travers le constructeur de la classe parente */
         this.minParticipants = minParticipants;
     }
 
    //  Getters et Setters
-    @OneToOne
-    @JoinColumn(name = "ID_AKDEMIA_PARTICULAR_SOUSCRIPTION", referencedColumnName 
-    = "ID", insertable = false, updatable = false)
-    private ParticularSubscription particularSubscription;
+    
+    @OneToMany(mappedBy = "interSession", fetch = FetchType.EAGER)
+	private List<ParticularSubscription> particularSubscription = new ArrayList<>();
     
     public int getMinParticipants() {
         return minParticipants;

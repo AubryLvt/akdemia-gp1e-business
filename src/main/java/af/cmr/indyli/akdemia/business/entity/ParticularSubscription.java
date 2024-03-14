@@ -6,7 +6,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -25,6 +28,7 @@ public class ParticularSubscription implements IEntity {
 	private static final long serialVersionUID = -4456210831722351387L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID")
 	private Integer id;
 	
@@ -39,9 +43,11 @@ public class ParticularSubscription implements IEntity {
 	private Date updateDate;
 	
 	@ManyToOne
+    @JoinColumn(name = "ID_AKDEMIA_INTER_SESSION", referencedColumnName = "ID", insertable = false, updatable = false)
 	private InterSession interSession;
 	
 	@ManyToOne
+    @JoinColumn(name = "ID_AKDEMIA_PARTICULAR", referencedColumnName = "ID", insertable = false, updatable = false)
 	private Particular particular;
 	
 	// ----------------------------- //

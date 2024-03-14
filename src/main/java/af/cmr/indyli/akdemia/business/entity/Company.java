@@ -41,6 +41,14 @@ public class Company extends User implements IEntity {
 
 	@OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
 	private List<Employee> employees = new ArrayList<>();
+	
+	//ajouter pour correction
+	
+	@OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
+	private List<IntraSession> intraSession = new ArrayList<>();
+	
+	
+	//
 	//
 	//
 	//
