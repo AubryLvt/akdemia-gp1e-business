@@ -2,8 +2,6 @@ package af.cmr.indyli.akdemia.business.entity;
 
 import java.util.Date;
 
-import org.hibernate.type.descriptor.jdbc.VarcharJdbcType;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

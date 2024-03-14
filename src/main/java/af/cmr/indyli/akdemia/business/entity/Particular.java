@@ -1,9 +1,13 @@
 package af.cmr.indyli.akdemia.business.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 /**
@@ -15,9 +19,6 @@ import jakarta.persistence.Table;
 @Table(name = "AKDEMIA_PARTICULAR")
 public class Particular extends User {
 
-	/**
-	 * 
-	 */
 	// --------------------- //
 	// ----- ATTRIBUTS ----- //
 	// --------------------- //
@@ -39,21 +40,20 @@ public class Particular extends User {
 
 	@Column(name = "BIRTH_DATE")
 	private Date birthDate;
-	//
-	//
-	//
-	//
-	//
+	
+//	@OneToMany
+//    @JoinColumn(name = "ID_AKDEMIA_PARTICULAR_SOUSCRIPTION", referencedColumnName = "ID", insertable = false, updatable = false)
+//	private ParticularSubscription particularSubscription;
+	
+    @OneToMany(mappedBy = "particular", fetch = FetchType.EAGER)
+	private List<ParticularSubscription> particularSubscription = new ArrayList<>();
+	
 	// -------------------- //
 	// ----- METHODES ----- //
 	// -------------------- //
 	public Particular() {
 	}
-	//
-	//
-	//
-	//
-	//
+
 	// ----------------------------- //
 	// ----- GETTERS & SETTERS ----- //
 	// ----------------------------- //
@@ -103,5 +103,13 @@ public class Particular extends User {
 
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
+	}
+	
+	public List<ParticularSubscription> getParticularSubscription() {
+		return particularSubscription;
+	}
+
+	public void setParticularSubscription(List<ParticularSubscription> particularSubscription) {
+		this.particularSubscription = particularSubscription;
 	}
 }

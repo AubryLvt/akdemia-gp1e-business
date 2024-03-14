@@ -3,7 +3,6 @@ package af.cmr.indyli.akdemia.business.dto.full;
 import java.util.ArrayList;
 import java.util.List;
 
-import af.cmr.indyli.akdemia.business.dto.basic.EmployeeBasicDTO;
 import af.cmr.indyli.akdemia.business.dto.basic.ParticularBasicDTO;
 import af.cmr.indyli.akdemia.business.dto.medium.ParticularMediumDTO;
 import af.cmr.indyli.akdemia.business.entity.Particular;

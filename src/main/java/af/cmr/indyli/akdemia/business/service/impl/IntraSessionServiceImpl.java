@@ -3,7 +3,6 @@ package af.cmr.indyli.akdemia.business.service.impl;
 import org.springframework.stereotype.Service;
 
 import af.cmr.indyli.akdemia.business.dao.IIntraSessionRepository;
-import af.cmr.indyli.akdemia.business.dao.ITrainerRepository;
 import af.cmr.indyli.akdemia.business.dto.basic.IntraSessionBasicDTO;
 import af.cmr.indyli.akdemia.business.dto.full.IntraSessionFullDTO;
 import af.cmr.indyli.akdemia.business.entity.IntraSession;

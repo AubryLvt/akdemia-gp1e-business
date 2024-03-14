@@ -16,8 +16,6 @@ public class EmployeeSubscriptionBasicDTO implements IDTO {
 	private Status status;
 	private Date creationDate;
 	private Date updateDate;
-	private IntraSession intraSession;
-	private Employee employee;
 
 	// ----- CONSTRUCTEURS ----- //
 	public EmployeeSubscriptionBasicDTO() {
@@ -54,22 +52,5 @@ public class EmployeeSubscriptionBasicDTO implements IDTO {
 
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
-	}
-
-	public IntraSession getIntraSession() {
-		return intraSession;
-	}
-
-	public void setIntraSession(IntraSession intraSession) {
-		this.intraSession = intraSession;
-	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
-	
+	}	
 }

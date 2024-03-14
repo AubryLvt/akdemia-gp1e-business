@@ -16,8 +16,6 @@ public class ParticularSubscriptionBasicDTO implements IDTO {
 	private Status status;
 	private Date creationDate;
 	private Date updateDate;
-	private InterSession interSession;
-	private Particular particular;
 	
 	// ----- CONSTRUCTEURS ----- //
 	public ParticularSubscriptionBasicDTO() {
@@ -54,22 +52,6 @@ public class ParticularSubscriptionBasicDTO implements IDTO {
 
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
-	}
-
-	public InterSession getInterSession() {
-		return interSession;
-	}
-
-	public void setInterSession(InterSession interSession) {
-		this.interSession = interSession;
-	}
-
-	public Particular getParticular() {
-		return particular;
-	}
-
-	public void setParticular(Particular particular) {
-		this.particular = particular;
 	}
 	
 }
