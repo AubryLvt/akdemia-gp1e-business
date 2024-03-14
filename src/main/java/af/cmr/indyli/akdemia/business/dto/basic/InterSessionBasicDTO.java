@@ -18,6 +18,7 @@ public class InterSessionBasicDTO implements IDTO{
 		private Date updateDate;
 		private Date sessionScore;
 		private int minParticipants;
+		private String location;
 	
 		public InterSessionBasicDTO() {
 			super();
@@ -109,6 +110,12 @@ public class InterSessionBasicDTO implements IDTO{
 
 		public void setMinParticipants(int minParticipants) {
 			this.minParticipants = minParticipants;
+		}
+		public String getLocation() {
+			return location;
+		}
+		public void setLocation(String location) {
+			this.location = location;
 		}
 	
 }
