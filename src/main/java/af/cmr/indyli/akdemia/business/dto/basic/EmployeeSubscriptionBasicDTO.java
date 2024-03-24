@@ -3,8 +3,6 @@ package af.cmr.indyli.akdemia.business.dto.basic;
 import java.util.Date;
 
 import af.cmr.indyli.akdemia.business.dto.IDTO;
-import af.cmr.indyli.akdemia.business.entity.Employee;
-import af.cmr.indyli.akdemia.business.entity.IntraSession;
 import af.cmr.indyli.akdemia.business.entity.Status;
 
 public class EmployeeSubscriptionBasicDTO implements IDTO {
