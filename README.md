@@ -1,25 +1,43 @@
-# akdemia-business
+# Projet Akdemia
 
-## Description
-Le projet Akdemia est une application de gestion de formation en ui permet à l'utilisateur de planifier, gérer et suivre des programmes de formation.
+Ce projet est un projet de fin d'études réalisé par quatre étudiants à partir d'un template fourni par les formateurs.
 
-## Fonctionnalités principales
-- Gestion des entreprises et des apprenants  
-- Gestion des utilisateurs
-- Gestion des formations 
-- Plannification et Suivi des sessions de formation
-## Démarrage
-1. Clonez ce dépôt sur votre machine locale. 
-2. Assurez-vous d'avoir JDK (version 17 ou supérieure) et Maven (Maven) installé.
-3. Exécutez la commande mvn install pour installer les dépendances et construire le projet. 
-4. Configurez les informations de connexion à la base de données, dans le fichier `application.yml`.
+## Qu'est-ce qu'Akdemia ?
 
-## Procédure pour exécuter les tests unitaires
-Ce projet utilise des tests unitaires pour vérifier le bon fonctionnement du code. Voici comment exécuter ces tests unitaires
-### Prérequis
-- Créer la base de données akdemia_test (MySQL)
-- Configurer la source des données tests et vos identifiants dans le fichier application properties de test : `src/test/resources/application.yml`.
-### Exécution des tests unitaires
+Akdemia est un tableau de bord destiné aux administrateurs d'un organisme de formation.
 
-Une fois les dépendances installées, vous pouvez exécuter les tests unitaires en utilisant la commande suivante : `mvn test`
-Cela exécutera l'ensemble des tests unitaires définis. Les résultats des tests seront affichés dans la console.
+Le but de ce tableau de bord est de leur permettre de gérer les intervenants, les formations, les sessions de formation, les thèmes des formations etc.
+
+## Structure du projet
+
+Le projet est divisé en trois parties :
+
+- la partie front-end/Angular : [akdemia-web-front](https://github.com/AubryLvt/akdemia-gp1e-web-front)
+- la partie web services : [akdemia-ws](https://github.com/AubryLvt/akdemia-gp1e-ws)
+- la partie business : [akdemia-business](https://github.com/AubryLvt/akdemia-gp1e-business)
+
+Vous êtes ici dans la partie business.
+
+# ----------------------------------------------------------------
+
+# _English version :_
+
+# Akdemia Project
+
+This project is an end-of-study project carried out by four students using a template provided by the instructors.
+
+## What is Akdemia?
+
+Akdemia is a dashboard intended for administrators of a training organization.
+
+The purpose of this dashboard is to allow them to manage trainers, trainings, training sessions, training themes, etc.
+
+## Project structure
+
+The project is divided into three parts:
+
+- the front-end/Angular part: [akdemia-web-front](https://github.com/AubryLvt/akdemia-gp1e-web-front)
+- the web services part: [akdemia-ws](https://github.com/AubryLvt/akdemia-gp1e-ws)
+- the business part: [akdemia-business](https://github.com/AubryLvt/akdemia-gp1e-business)
+
+You are here in the business part.
